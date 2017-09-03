@@ -1,0 +1,23 @@
+var express = require('express');
+var router = express.Router();
+var Spooky = require('spooky');
+
+var json = { status: '', title: '' };
+
+/* GET home page. */
+router.get('/baekdu', function(req, res, next) {
+  url = 'http://www.jejunu.ac.kr/camp/stud/foodmenu';
+  spooky = new Spooky({
+    spooky.start(url);
+    spooky.then(function() {
+      console.log(document.title);
+      json.title = document.title;
+    });
+    spooky.run();
+
+
+  });
+  res.render('index', json);
+});
+
+module.exports = router;
