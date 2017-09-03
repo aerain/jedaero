@@ -3,6 +3,7 @@ var router = express.Router();
 var request = require('request');
 const cheerio = require('cheerio');
 
+
 /* GET home page. */
 router.get('/baekdu', function(req, res, next) {
   url = 'http://www.jejunu.ac.kr/camp/stud/foodmenu',
@@ -10,7 +11,8 @@ router.get('/baekdu', function(req, res, next) {
   request(url, function(error, response, html) {
     if(!error){
       var $ = cheerio.load(html);
-      strjson += '{ "title" : "노답", ';
+      console.log(html.toString('utf-8'));
+      strjson += '{ "title" : "백두관 식당", ';
       table = $('.table.border_left.border_top_blue > tbody > tr > td > p').each(function(i) {
         strjson += '"food' + i + '" : "' + $(this).text() + '", ';
         // console.log($(this).text());
