@@ -2,26 +2,15 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 const cheerio = require('cheerio');
-
+var baekdu = require('../public/javascripts/baekdu');
 
 /* GET home page. */
 router.get('/baekdu', function(req, res, next) {
-  url = 'http://www.jejunu.ac.kr/camp/stud/foodmenu',
-  strjson = '';
+  url = 'http://www.jejunu.ac.kr/camp/stud/foodmenu';
   request(url, function(error, response, html) {
     if(!error){
-      var $ = cheerio.load(html);
-      console.log(html.toString('utf-8'));
-      strjson += '{ "title" : "백두관 식당", ';
-      table = $('.table.border_left.border_top_blue > tbody > tr > td > p').each(function(i) {
-        strjson += '"food' + i + '" : "' + $(this).text() + '", ';
-        // console.log($(this).text());
-      });
-      strjson += '"blank" : ""}';
-      strjson = strjson.replace(/\n/gi, '\\r\\n');
-      // console.log(strjson);
-      json = JSON.parse(strjson);
-      res.render('info/baekdu',json);
+      var load = cheerio.load(html);
+      res.render('info/baekdu',baekdu(load));
     }
   });
 });
