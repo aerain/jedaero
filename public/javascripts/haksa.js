@@ -9,7 +9,7 @@ module.exports = function ($) {
   });
   strjson += '"blank" : ""}';
   console.log(strjson);
-  
+
 
   return JSON.parse(strjson);
 }

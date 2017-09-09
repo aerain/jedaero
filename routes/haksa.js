@@ -12,9 +12,7 @@ router.get('/haksa', function(req, res, next) {
   strjson = '';
   request(url, function(error, response, html) {
     if(!error){
-      var $ = cheerio.load(html);
-
-
+      var load = cheerio.load(html);
       res.render('info/haksa', haksa(load));
     }
 
