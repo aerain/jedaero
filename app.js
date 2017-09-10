@@ -30,6 +30,9 @@ app.use('/users', users);
 app.get('/baekdu', baekdu);
 app.get('/dormitory', dormitory);
 app.get('/haksa', haksa);
+app.get('/version', function(req, res) {
+    res.render('version', {"title" : "제대로 버전"});
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

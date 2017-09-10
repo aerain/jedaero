@@ -1,16 +1,96 @@
-<!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset='utf-8'>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body style="white-space:normal">
-    <h1><%= title %></h1>
-    <p>Welcome to</p>
-    <p><a href = "/baekdu">백두관 식당</a></p>
-    <p><a href = "/dormitory">기숙사 생활관 식당 </a></p>
-    <p><a href = "/haksa">제주대학교 금년 학사일정</a></p>
 
-  </body>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/jeju.css" />
+
+	<script src="/javascripts/jquery-2.1.3.min.js"></script>
+	<script src="/javascripts/materialsidebar.min.js"></script>
+
+	<script>
+		$(function() {
+
+			$('.sidebar').materialSidebar({
+				settings: {
+					opener: '#open-sb',
+					wrapper: '.wrapper'
+				},
+				sidebar: {
+					align: 'left',
+					width: 300,
+					closingLinks: '#closeButton2'
+				}
+			});
+
+		});
+
+		function closeSidebar() {
+			var nsbw = $('.sidebar').width();
+			var duration = 500;
+			var easing = 'swing';
+			var overflowFalse = function() {
+				$('body, html').css({
+					overflow: 'auto'
+				});
+			};
+
+			animationReset = {
+				marginRight: '+=' + nsbw,
+				marginLeft: '-=' + nsbw
+			};
+
+			$('.sidebar').animate(animationReset, {
+				duration: duration,
+				easing: easing,
+				complete: overflowFalse
+			});
+
+			var maskDiv = $('body').children().filter(function() {
+				return $(this).data('ssbplugin') === 'mask';
+			});
+
+			maskDiv.fadeOut();
+
+			//$('.sidebar').hide();
+		}
+	</script>
+
+</head>
+
+<body>
+	<div class="toolbar">
+		<div id="open-sb" class="menu-button menu-left"></div>
+	</div>
+	<div class="wrapper">
+		<div id="main-wrapper">
+			<center>
+				제대로 가자 ^^
+			</center>
+		</div>
+		<section class="sidebar">
+			<nav>
+
+
+				<div class="button" id="closeButton1" onclick="closeSidebar()">X</div>
+				<ul id="list01">
+					<li><a href = "/baekdu">백두관 식당</a></li>
+					<li><a href = "/dormitory">기숙사 생활관 식당 </a></li>
+					<li><a href = "/haksa">제주대학교 금년 학사일정</a></li>
+					<li><a href= "/version">제대로 버전 업데이트 사항 </a></li>
+				</ul>
+			</nav>
+
+		</section>
+		<div class="underbar">
+		</div>
+	</div>
+
+
+
+
+</body>
+
 </html>

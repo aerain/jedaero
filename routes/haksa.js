@@ -15,11 +15,6 @@ router.get('/haksa', function(req, res, next) {
       var load = cheerio.load(html);
       res.render('info/haksa', haksa(load));
     }
-
   });
-
-
-
 });
-
 module.exports = router;
