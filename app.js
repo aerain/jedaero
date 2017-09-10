@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var baekdu = require('./routes/baekdu');
 var dormitory = require('./routes/dormitory');
 var haksa = require('./routes/haksa');
+var libseat = require('./routes/libseat');
 
 var app = express();
 

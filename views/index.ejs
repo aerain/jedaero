@@ -9,60 +9,13 @@
 
 	<script src="/javascripts/jquery-2.1.3.min.js"></script>
 	<script src="/javascripts/materialsidebar.min.js"></script>
-
-	<script>
-		$(function() {
-
-			$('.sidebar').materialSidebar({
-				settings: {
-					opener: '#open-sb',
-					wrapper: '.wrapper'
-				},
-				sidebar: {
-					align: 'left',
-					width: 300,
-					closingLinks: '#closeButton2'
-				}
-			});
-
-		});
-
-		function closeSidebar() {
-			var nsbw = $('.sidebar').width();
-			var duration = 500;
-			var easing = 'swing';
-			var overflowFalse = function() {
-				$('body, html').css({
-					overflow: 'auto'
-				});
-			};
-
-			animationReset = {
-				marginRight: '+=' + nsbw,
-				marginLeft: '-=' + nsbw
-			};
-
-			$('.sidebar').animate(animationReset, {
-				duration: duration,
-				easing: easing,
-				complete: overflowFalse
-			});
-
-			var maskDiv = $('body').children().filter(function() {
-				return $(this).data('ssbplugin') === 'mask';
-			});
-
-			maskDiv.fadeOut();
-
-			//$('.sidebar').hide();
-		}
-	</script>
-
+	<script src="/javascripts/webslider.js"></script>
 </head>
 
 <body>
 	<div class="toolbar">
 		<div id="open-sb" class="menu-button menu-left"></div>
+		<div>제대로 가자</div>
 	</div>
 	<div class="wrapper">
 		<div id="main-wrapper">
@@ -78,7 +31,8 @@
 				<ul id="list01">
 					<li><a href = "/baekdu">백두관 식당</a></li>
 					<li><a href = "/dormitory">기숙사 생활관 식당 </a></li>
-					<li><a href = "/haksa">제주대학교 금년 학사일정</a></li>
+					<li><a href = "/haksa">제주대학교 금년 학사일정</a></li>석
+					<li><a href = "/libseat">중앙도서관 열람실 좌석</a></li>
 					<li><a href= "/version">제대로 버전 업데이트 사항 </a></li>
 				</ul>
 			</nav>
