@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body style="white-space:pre-line">
+<h1><%= title %></h1>
+
+<%- JSON.stringify(data.list.length)%>
+
+
+
+
+
+
+
+<table border="1">
+
+<% for (var i = 0; i < data.list.length; i ++) { %>
+
+   <tr>
+       <td>
+        <%= data.list[i].titleStatement %>
+       </td>
+       <td> <%= data.list[i].author %> </td>
+       <td> <%= data.list[i].publication %> </td>
+         <% if (data.list[i].branchVolumes === null ) { %>
+            <% continue; %>
+           <% } else { %>
+       <td>
+           <%= data.list[i].branchVolumes.cState %>
+       </td>
+       <td> <%= data.list[i].branchVolumes.volume %> </td>
+       <td> <%= data.list[i].branchVolumes.name %> </td>
+           <% } %>
+
+
+   </tr>
+<% } %>
+</table>
+
+
+
+
+</body>
+</html>
