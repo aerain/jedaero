@@ -17,10 +17,10 @@ router.get('/libserch', function(req,res,next){
     request(url,function (err, ress, html) {
     if (!err) {
 
-        dbjson = html;
+        dbjson = JSON.stringify(html);
 
         dbjson.title = "영어공부해";
-        console.log(dbjson);
+        console.log(html);
 
         res.render('info/libserch', dbjson);
 
