@@ -6,15 +6,31 @@ var cheerio = require('cheerio');
 var iconv = require('iconv-lite');
 
 /* GET home page. */
-router.get('/timetable', function(req, res, next) {
-  cookiestring = "JSESSIONID=UpRwLvUaBw33YXnr9hGYGA8X3gyFgFaCFAlSPL8Xwzf7ThK79IpRVhEEj9X6Tx7G.jnuwas1_servlet_engine1; expires=Session"
+router.post('/timetable', function(req, res, next) {
+ 
   options = {
     uri: 'https://dreamy.jejunu.ac.kr/susj/su/sta_su_6170q.jejunu',
-    headers: { "User-Agent": "KHTML, like Gecko" },
+  headers: {
+      "User-Agent": "KHTML, like Gecko",
+      "Cookie": "JSESSIONID=dRqBSG7yk6khoOtMP6Ldg1kOzwO45S6L8aqIFMHSUc3KaBJ39iQMNYCPqYKvpDX9.jnuwas2_servlet_engine1",
+      "Connection" : "keep-alive",
+      "Content-Length" : "87",
+      "Referer": "https://dreamy.jejunu.ac.kr/susj/su/sta_su_6170q.jejunu",
+      
+      
+  },
+    formData:{
+      "mode": "doListTimetable",
+      "curri_year": "2017",
+      "term_db": "20",
+      "su_dt": "20170920",
+      "student_no": "2014108205",
+      "_":""
+      },
     encoding: null
   };
 
-  request(url, function(err, res, html) {
+  request("http://www.naver.com", function(err, res, html) {
     if (!err){
       var $ = cheerio.load(html);
       console.log(html);

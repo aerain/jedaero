@@ -5,7 +5,7 @@ module.exports = function ($) {
   $('.wanted > tbody > tr > td').each(function() {
     strjson += '"dormitory' + countday + '_' + countmenu + '" : "' + $(this).text() + '", ';
     countmenu++;
-    if (countmenu % 6 == 0){
+    if (countmenu % 6 === 0){
       countmenu = 1;
       countday++;
     }

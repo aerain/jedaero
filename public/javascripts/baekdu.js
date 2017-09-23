@@ -5,7 +5,7 @@ module.exports = function ($) {
   $('.table.border_left.border_top_blue > tbody > tr > td > p').each(function() {
     strjson += '"baekdu' + countday + "_" + countmenu + '" : "' + $(this).text() + '", ';
     countmenu++;
-    if (countmenu % 9 == 0){
+    if (countmenu % 9 === 0){
       countmenu = 1;
       countday++;
     }
