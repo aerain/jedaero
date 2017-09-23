@@ -11,7 +11,11 @@ var baekdu = require('./routes/baekdu');
 var dormitory = require('./routes/dormitory');
 var haksa = require('./routes/haksa');
 var libseat = require('./routes/libseat');
+<<<<<<< HEAD
 var libserch = require('./routes/libserch');
+=======
+var timetable = require('./routes/timetable');
+>>>>>>> def18da2f5e204b456aa80496cfe1d8bdef842c3
 
 var app = express();
 
@@ -32,7 +36,12 @@ app.use('/users', users);
 app.get('/baekdu', baekdu);
 app.get('/dormitory', dormitory);
 app.get('/haksa', haksa);
+<<<<<<< HEAD
 app.get('/libserch',libserch);
+=======
+app.post('/timetable', timetable);
+app.get('/libseat', libseat);
+>>>>>>> def18da2f5e204b456aa80496cfe1d8bdef842c3
 app.get('/version', function(req, res) {
     res.render('version', {"title" : "제대로 버전"});
 });

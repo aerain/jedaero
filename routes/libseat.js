@@ -10,8 +10,12 @@ var libseat = require('../public/javascripts/libseat');
 
 router.get('/libseat', function (req, res, next) {
     options = {
-        uri : "http://203.253.194.57/domian5.asp",        //request options
-        encoding : null
+      uri : "http://203.253.194.57/domian5.asp",        //request options
+      encoding : null,
+      headers : {
+        "User-Agent" : "KHTML, like Gecko",
+        "encoding" : "null"
+      }
     };
     request(options, function (err, response, html) {
         if (!err) {
