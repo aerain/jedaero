@@ -12,7 +12,7 @@ var iconv = require('iconv-lite');
    // encoding : null,
 
 //};
-var i,j,x ="";
+
 
 router.get('/libserch', function(req,res,next){
     request(url,function (err, ress, html) {
@@ -20,9 +20,6 @@ router.get('/libserch', function(req,res,next){
 
        dbjson = JSON.parse(html);
 
-      // Dbjson = JSON.stringify(dbjson);
-
-        //Dbjson = JSON.stringify(dbjson.data.list.branchVolumes);
 
 
 
@@ -30,13 +27,7 @@ router.get('/libserch', function(req,res,next){
         console.log(dbjson.data.list[21].branchVolumes[0]);
 
         res.render('info/libserch', dbjson);
-        //res.render('info/libserch', Dbjson);
 
-        // res.render('info/libserch', dbjson);
-        // date = $('titleStatment').each(function () {
-        // console.log($(this).text());
-
-        //});
 
 
     }
