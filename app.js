@@ -11,11 +11,8 @@ var baekdu = require('./routes/baekdu');
 var dormitory = require('./routes/dormitory');
 var haksa = require('./routes/haksa');
 var libseat = require('./routes/libseat');
-<<<<<<< HEAD
 var libserch = require('./routes/libserch');
-=======
 var timetable = require('./routes/timetable');
->>>>>>> def18da2f5e204b456aa80496cfe1d8bdef842c3
 
 var app = express();
 
