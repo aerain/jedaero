@@ -12,18 +12,25 @@ var iconv = require('iconv-lite');
    // encoding : null,
 
 //};
+var i,j,x ="";
 
 router.get('/libserch', function(req,res,next){
     request(url,function (err, ress, html) {
     if (!err) {
 
-        dbjson = JSON.stringify(html);
+       dbjson = JSON.parse(html);
+
+      // Dbjson = JSON.stringify(dbjson);
+
+        //Dbjson = JSON.stringify(dbjson.data.list.branchVolumes);
+
+
 
         dbjson.title = "영어공부해";
-        console.log(html);
+        console.log(dbjson.data.list[21].branchVolumes[0]);
 
         res.render('info/libserch', dbjson);
-
+        //res.render('info/libserch', Dbjson);
 
         // res.render('info/libserch', dbjson);
         // date = $('titleStatment').each(function () {

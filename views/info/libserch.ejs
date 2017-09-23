@@ -8,38 +8,41 @@
 <body style="white-space:pre-line">
 <h1><%= title %></h1>
 
-<%- JSON.stringify(data.list.length)%>
 
+<table border="1">
 
+    <% for (var i = 0; i < data.list.length; i ++) { %>
 
+    <tr>
+        <td>
+            <%= data.list[i].titleStatement %>
+        </td>
+        <td> <%= data.list[i].author %> </td>
+        <td> <%= data.list[i].publication %> </td>
+        <% if (JSON.stringify(data.list[i].branchVolumes) === "[]") { %>
+        <td colspan="3">
+        대출 가능 상태 판별 불가.
+         </td>
+        <% } else { %>
+        <td><%= data.list[i].branchVolumes[0].cState %></td>
+        <td> <%= data.list[i].branchVolumes[0].volume %> </td>
+        <td> <%= data.list[i].branchVolumes[0].name %> </td>
+        <% } %>
 
+    </tr>
+    <% } %>
+</table>
+<script>
+
+</script>
 
 
 
 <table border="1">
 
-<% for (var i = 0; i < data.list.length; i ++) { %>
-
-   <tr>
-       <td>
-        <%= data.list[i].titleStatement %>
-       </td>
-       <td> <%= data.list[i].author %> </td>
-       <td> <%= data.list[i].publication %> </td>
-         <% if (data.list[i].branchVolumes === null ) { %>
-
-           <% } else { %>
-       <td>
-           <%= data.list[i].branchVolumes.cState %>
-       </td>
-       <td> <%= data.list[i].branchVolumes.volume %> </td>
-       <td> <%= data.list[i].branchVolumes.name %> </td>
-           <% } %>
 
 
-   </tr>
-<% } %>
-</table>
+
 
 
 
