@@ -34,7 +34,7 @@ app.get('/baekdu', baekdu);
 app.get('/dormitory', dormitory);
 app.get('/haksa', haksa);
 app.get('/libserch',libserch);
-app.post('/timetable', timetable);
+app.get('/timetable', timetable);
 app.get('/libseat', libseat);
 app.get('/version', function(req, res) {
     res.render('version', {"title" : "제대로 버전"});
