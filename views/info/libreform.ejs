@@ -3,18 +3,23 @@
 <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
 </head>
 <body>
 <h1><%= title %></h1>
 <p>Welcome to <%= title %></p>
-<form ng-submit="search()" class="ng-pristine ng-valid">
-  <div class="ikc-search-form"><span class="ikc-search-form-keyword">
-    <input name="keyword" ng-model="keyword" ng-mouseup="target='keyword'" class="ikc-search-keyword ng-pristine ng-valid ng-empty ng-touched" placeholder="검색어를 입력하세요."></span>
-    <input type="hidden" name="oldKeyword" ng-model="oldKeyword" class="ng-pristine ng-untouched ng-valid ng-empty">
-    <span class="ikc-search-form-btn">
-      <input type="submit" value="검색" class="ikc-btn-search">
-    </span>
-  </div>
+<form method='GET' name='search' action='/libserch'>
+
+    <input name="keyword"  placeholder="검색어를 입력하세요.">
+    <input type="hidden" >
+    <input type="submit" value="검색">
+    <script>
+    function
+
+    </script>
+
+
 </form>
 </body>
 </html>
