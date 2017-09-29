@@ -39,6 +39,9 @@ app.get('/libseat', libseat);
 app.get('/version', function(req, res) {
     res.render('version', {"title" : "제대로 버전"});
 });
+app.get('/libreform', function(req,res) {
+    res.render('info/libreform', {"title" : "도서 검색"});
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

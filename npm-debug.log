@@ -7,7 +7,7 @@
 6 silly lifecycle cheerio-jadaero@0.1.3~prestart: no script for prestart, continuing
 7 info lifecycle cheerio-jadaero@0.1.3~start: cheerio-jadaero@0.1.3
 8 verbose lifecycle cheerio-jadaero@0.1.3~start: unsafe-perm in lifecycle true
-9 verbose lifecycle cheerio-jadaero@0.1.3~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/chronos/user/Downloads/jedaero/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/opt/bin
+9 verbose lifecycle cheerio-jadaero@0.1.3~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/chronos/user/Downloads/jedaero/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/home/chronos/user/Downloads/tools/bin
 10 verbose lifecycle cheerio-jadaero@0.1.3~start: CWD: /home/chronos/user/Downloads/jedaero
 11 silly lifecycle cheerio-jadaero@0.1.3~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle cheerio-jadaero@0.1.3~start: Returned: code: 1  signal: null
