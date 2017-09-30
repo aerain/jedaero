@@ -4,33 +4,39 @@
     <meta charset='utf-8'>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/search.js"> </script>
 </head>
 <body style="white-space:pre-line">
 <h1><%= title %></h1>
 
+<form method='GET' id='search' action='/libserch'>
+    <input name="keyword" id="keystr" placeholder="검색어를 입력하세요." required>
+    <input type="button" value="검색" onclick="nodap()">
+</form>
 
 <table border="1">
-
-    <% for (var i = 0; i < data.list.length; i ++) { %>
-
-    <tr>
-        <td>
-            <%= data.list[i].titleStatement %>
-        </td>
-        <td> <%= data.list[i].author %> </td>
-        <td> <%= data.list[i].publication %> </td>
-        <% if (JSON.stringify(data.list[i].branchVolumes) === "[]") { %>
-        <td colspan="3">
-        대출 가능 상태 판별 불가.
-         </td>
-        <% } else { %>
-        <td><%= data.list[i].branchVolumes[0].cState %></td>
-        <td> <%= data.list[i].branchVolumes[0].volume %> </td>
-        <td> <%= data.list[i].branchVolumes[0].name %> </td>
-        <% } %>
-
-    </tr>
-    <% } %>
+    <% if (JSON.stringify(data) !== "") { %>
+        <% for (var i = 0; i < data.list.length; i ++) { %>
+    
+        <tr>
+            <td>
+                <%= data.list[i].titleStatement %>
+            </td>
+            <td> <%= data.list[i].author %> </td>
+            <td> <%= data.list[i].publication %> </td>
+            <% if (JSON.stringify(data.list[i].branchVolumes) === "[]") { %>
+            <td colspan="3">
+            대출 가능 상태 판별 불가.
+             </td>
+            <% } else { %>
+            <td><%= data.list[i].branchVolumes[0].cState %></td>
+            <td> <%= data.list[i].branchVolumes[0].volume %> </td>
+            <td> <%= data.list[i].branchVolumes[0].name %> </td>
+            <% } %>
+    
+        </tr>
+    <% } } %>
+    
 </table>
 
 

@@ -37,9 +37,6 @@ app.get('/haksa', haksa);
 app.get('/libserch',libserch);
 app.get('/timetable', timetable);
 app.get('/libseat', libseat);
-app.get('/libreform',function(req, res){
-  res.render('info/libreform', {"title" : "adfasdf"});
-});
 app.get('/version', function(req, res) {
     res.render('version', {"title" : "제대로 버전"});
 });
