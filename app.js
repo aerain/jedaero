@@ -13,7 +13,6 @@ var haksa = require('./routes/haksa');
 var libseat = require('./routes/libseat');
 var libserch = require('./routes/libserch');
 var timetable = require('./routes/timetable');
-var libreform = require('./routes/libserch');
 
 var app = express();
 
@@ -34,32 +33,32 @@ app.use('/users', users);
 app.get('/baekdu', baekdu);
 app.get('/dormitory', dormitory);
 app.get('/haksa', haksa);
-app.get('/libserch',libserch);
+app.get('/libsearch', libserch);
 app.get('/timetable', timetable);
 app.get('/libseat', libseat);
 app.get('/version', function(req, res) {
-    res.render('version', {"title" : "제대로 버전"});
+    res.render('version', { "title": "제대로 버전" });
 });
-app.get('/libreform', function(req,res) {
-    res.render('info/libreform', {"title" : "도서 검색"});
+app.get('/libreform', function(req, res) {
+    res.render('info/libreform', { "title": "도서 검색" });
 });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 // app.listen();

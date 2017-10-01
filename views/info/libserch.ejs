@@ -9,18 +9,20 @@
 <body style="white-space:pre-line">
 <h1><%= title %></h1>
 
-<form method='GET' id='search' action='/libserch'>
-    <input name="keyword" id="keystr" placeholder="검색어를 입력하세요." required>
-    <input type="button" value="검색" onclick="nodap()">
+<form method='GET' id='search' action='/libsearch'>
+    <input name="keyword" id="keystr" placeholder="검색어를 입력하세요.">
+    <button onclick="document.getElementById('search').submit()">검색 이미지</button>
 </form>
 
-<table border="1">
-    <% if (JSON.stringify(data) !== "") { %>
+<form method='GET' id='detail' action="/libdetail">
+    <input type="hidden" name="id" id="libnumber">
+
+<% if (code !== "success.noRecord") { %>
+    <table border="1">
         <% for (var i = 0; i < data.list.length; i ++) { %>
-    
         <tr>
             <td>
-                <%= data.list[i].titleStatement %>
+                <a href="javascript:{}" onclick="document.getElementById('id').value = <%= data.list[i].id %>; document.getElementById('detail').submit();"><%= data.list[i].titleStatement %></a>
             </td>
             <td> <%= data.list[i].author %> </td>
             <td> <%= data.list[i].publication %> </td>
@@ -33,15 +35,12 @@
             <td> <%= data.list[i].branchVolumes[0].volume %> </td>
             <td> <%= data.list[i].branchVolumes[0].name %> </td>
             <% } %>
-    
         </tr>
-    <% } } %>
-    
-</table>
-
-
-
-
-
+    <% } %>
+    </table>
+<% } else { %>
+    조회된 결과가 없습니다.
+<% }%>
+</form>
 </body>
 </html>
