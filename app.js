@@ -33,7 +33,7 @@ app.use('/users', users);
 app.get('/baekdu', baekdu);
 app.get('/dormitory', dormitory);
 app.get('/haksa', haksa);
-app.get('/libsearch', libserch);
+app.get('/libserch', libserch);
 app.get('/timetable', timetable);
 app.get('/libseat', libseat);
 app.get('/version', function(req, res) {
