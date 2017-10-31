@@ -1,0 +1,49 @@
+.menu {
+  margin: 5%;
+  font-weight: bold;
+  font-size: 55px;
+  text-align: center;
+}
+
+.day-select {
+  color: white;
+  font-size: 32px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  background-color: rgb(15, 100, 210);
+}
+
+ .day li {
+   font-size: 32px;
+   text-align: center;
+   list-style: none;
+   width: 20%;
+   float: left;
+   margin-top: 4%;
+   margin-bottom: 4%;
+}
+
+.day li:hover {
+  background-color: rgb(148, 188, 248);
+  color: #ffffff;
+}
+
+.menu-sort {
+  font-size: 32px;
+  clear: both;
+  text-align: center;
+  color: white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: rgb(15, 100, 210);
+}
+
+.menu-cont {
+  font-size: 25px;
+  border: 2px solid;
+  text-align: center;
+  color: rgb(10, 50, 100);
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
