@@ -4,8 +4,8 @@ var request = require('request');
 var cheerio = require('cheerio');
 var iconv = require('iconv-lite');
 
-router.get('/libserch', function(req, res, next) {
-    url = "http://lib.jejunu.ac.kr/pyxis-api/1/collections/1/search";
+router.get('/libsearch', function(req, res, next) {
+    url = "http://lib.jejunu.ac.kr/pyxis-api/1/collections/1/search?";
     viewurl= "http://lib.jejunu.ac.kr/pyxis-api/1/biblios/732900/items";
     if(req.query.keyword !== undefined) {
         url = "http://lib.jejunu.ac.kr/pyxis-api/1/collections/1/search?all=k|a|" + encodeURI(req.query.keyword) + "&facet=false&max=65535";
@@ -14,12 +14,12 @@ router.get('/libserch', function(req, res, next) {
         if (!err) {
             dbjson = JSON.parse(html);
             dbjson.title = "영어공부해";
-            //  console.log(html);
+
 
             request(viewurl, function (err, ress, html) {
                 if (!err) {
                     DBjson = JSON.parse(html);
-                    console.log(req);
+                  //  console.log(req);
                     res.render('info/libserch',dbjson);
 
                 }
