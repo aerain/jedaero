@@ -3,7 +3,12 @@
   height: 80px;
 }
 
+.top-bar button {
+  border: 0;
+}
+
 .top-bar img {
+  background-color: transparent;
   height: 80px;
   width: 80px;
 }

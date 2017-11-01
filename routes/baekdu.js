@@ -5,7 +5,7 @@ const cheerio = require('cheerio');
 var baekdu = require('../public/javascripts/baekdu');
 
 /* GET home page. */
-router.get('/baekdu', function(req, res, next) {
+router.get('/schoolfood', function(req, res, next) {
 
     options = {
         uri: 'http://www.jejunu.ac.kr/camp/stud/foodmenu',

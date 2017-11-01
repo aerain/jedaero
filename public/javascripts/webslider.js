@@ -7,7 +7,6 @@ $(function() {
     },
     sidebar: {
       align: 'left',
-      width: 300,
       closingLinks: '#closeButton2'
     }
   });
