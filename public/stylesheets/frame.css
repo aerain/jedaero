@@ -1,6 +1,6 @@
 .top-bar {
   background-color: rgb(12, 80, 160);
-  height: 7rem;
+  height: 9rem;
 
 }
 
@@ -10,18 +10,18 @@
 
 .top-bar img {
   background-color: transparent;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  height: 3rem;
-  width: 4rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  height: 5rem;
+  width: 6rem;
 }
 
 .menu-name {
-  font-size: 35px;
+  font-size: 60px;
   color: white;
   text-align: right;
-  padding-right: 1rem;
-  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
 }
 
 ::-webkit-scrollbar {
@@ -29,8 +29,8 @@
 }
 
 .menu-slide ul {
-  padding-top: 5rem;
-  padding-left: 15px;
+  padding-top: 9rem;
+  padding-left: 20px;
 }
 
 .menu-slide li {
@@ -41,7 +41,7 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 

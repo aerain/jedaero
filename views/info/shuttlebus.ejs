@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="/javascripts/jquery-2.1.3.min.js"></script>
+    <script src="/javascripts/materialsidebar.min.js"></script>
+    <script src="/javascripts/webslider.js"></script>
+    <link rel="stylesheet" href="stylesheets/shuttlebus.css">
+    <link rel="stylesheet" href="stylesheets/frame.css">
+    <title>
+      shuttlebus
+    </title>
+  </head>
+  <body>
+    <!-- Toolbar -->
+      <div class="top-bar">
+        <div id="open-sb">
+        <img src="img/menu_button.png" alt="menu-button" align="left">
+      </div>
+        <div class="menu-name">
+          순환버스
+        </div>
+      </div>
+
+    <!-- Slidebar -->
+    <section class="sidebar">
+      <div class="menu-slide" align="left">
+        <ul>
+         <a href="/"><li class="home">홈</li></a>
+         <a href="#"><li class="bus">순환버스</li></a>
+         <a href="#"><li class="schedule">학사일정</li></a>
+         <a href="food_sort"><li class="food">뭐먹을까</li></a>
+         <a href="#"><li class="library">중도좌석</li></a>
+         <a href="#"><li class="book">도서검색</li></a>
+        </ul>
+       </div>
+     </section>
+
+  <!-- Toolbar End -->
+
+    <div class="wrapper">
+  		<div id="main-wrapper">
+  				<center>
+  			    <div class="menu_s" href=# onclick="slideCateScroll('scroll-list')"><B>정문</B></div>
+  			    <div id="scroll-list" class="scroll-list">
+  			  <center>
+  			    <ul class="slide">
+  			      <li>정문<br></li>
+  			      <li>제2도서관<br></li>
+  			      <li>해대1호관<br></li>
+  			      <li>교양동<br></li>
+  			      <li>공대4호관<br></li>
+  			      <li>의전원<br></li>
+  			      <li>중앙도서관<br></li>
+  			      <li>인문대학(동)<br></li>
+  			      <li>학생생활관<br></li>
+  			      <li>인문대학(서)<br></li>
+  			      <li>학생회관<br></li>
+  			      <li>본관<br></li>
+  			    </ul>
+  			  </center></div><br>
+
+  			<div class="bus_A">
+  				<div class="A_icon">
+  					<span class="bus_name"><strong>A(시계)</strong></span><br>
+  					<img src="bus_icon.png"></img>
+  				</div>
+  				<div class="A_time">
+  					<span class="time1">5분전</span><br>
+  					<span class="time2">다음버스 25분전</span>
+  				</div>
+  			</div><br>
+  			<div class="bus_B">
+  				<div class="B_time">
+  					<span class="time1">15분전</span><br>
+  					<span class="time2">다음버스 35분전</span>
+  				</div>
+  				<div class="B_icon">
+  					<span class="bus_name"><strong>B(반시계)</strong></span><br>
+  					<img src="bus_icon.png"></img>
+  				</div>
+  				</div>
+  			</div>
+  		</center>
+  		<p><br> * 버스 사정에 따라 차이가 있을 수 있음</p><br>
+  		</div>
+  </body>
+</html>

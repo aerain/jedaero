@@ -45,10 +45,13 @@ app.get('/libreform', function(req, res) {
     res.render('info/libreform', { "title": "도서 검색" });
 });
 app.get('/frame', function(req,res) {
-    res.render('frame', {"title": "노답"});
+    res.render('frame', {"title": "틀"});
 });
 app.get('/food_sort', function(req,res) {
-    res.render('info/food_sort', {"title": "노답"});
+    res.render('info/food_sort', {"title": "뭐먹을까 페이지"});
+});
+app.get('/shuttlebus', function(req,res) {
+    res.render('info/shuttlebus', {"title": "순환버스"});
 });
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
