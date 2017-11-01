@@ -1,15 +1,15 @@
 <!doctype html>
 <html>
 <head>
-  <link rel="stylesheet" href="/css/frame.css">
-  <link rel="stylesheet" href="/css/schoolfood.css">
+  <link rel="stylesheet" href="stylesheets/frame.css">
+  <link rel="stylesheet" href="stylesheets/schoolfood.css">
 
   <meta charset="utf-8">
   <title>Slick test</title>
-  <link rel="stylesheet" type="text/css" href="slick.css">
-  <link rel="stylesheet" type="text/css" href="slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/slick/slick-theme.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="slick.min.js"></script>
+  <script type="text/javascript" src="javascripts/slick/slick.min.js"></script>
   <script>
   $(document).ready(function() {
     $(".slider").slick({
@@ -26,31 +26,6 @@
 });
   })
   </script>
-  <style type="text/css">
-  .scroll-list {
-  background-color: #efefef;
-  width: 100%;
-  height: 1px;
-  overflow: auto;
-  line-height:180%;
-  text-align: left;
-
-  }
-  .scroll-list2 {
-  background-color: #efefef;
-  width: 100%;
-  height: 1px;
-  overflow: auto;
-  line-height:180%;
-  padding:10;
-  }
-
-ul{
-  list-style-type: none;
-  padding-left: 0px;
-
-}
-  </style>
 
   <SCRIPT LANGUAGE="JavaScript">
   <!--
@@ -96,8 +71,10 @@ ul{
         뭐 먹을까
       </div>
     </div>
-
-    <div href=# onclick="slideCateScroll('scroll-list')" style="background-color:999999;width:100%;padding:10;color:black"><center><B>시간표</B></center></div>
+    <div class="menu">
+      <h1>학식메뉴</h1>
+    </div>
+    <div href=# onclick="slideCateScroll('scroll-list')" style="background-color:999999;width:100%;padding:10;color:black;font-size:2em;"><center><B>시간표</B></center></div>
 
     <div id="scroll-list" class="scroll-list">
 
@@ -139,7 +116,7 @@ ul{
         </tr>
         <tr>
           <td>라면</td>
-          <td>08:30 ~ 18:30 (11:00~16:00-라면 판매 안함)</td>
+          <td>08:30 ~ 18:30 <br> (11:00~16:00-라면 판매 안함)</td>
           <td>1,200원</td>
         </tr>
         <tr>
@@ -155,75 +132,66 @@ ul{
       </table>
 </div>
 
-    <div class="menu">
-      <h1>학식메뉴</h1>
-    </div>
-
-    <div class="content">
-      <div class="day-select">
-        요일선택
-      </div>
-
     <section class="slider">
 
       <div data-title="월">
     <ul>
       <li class="menu-sort">정식</li>
-      <li class="menu-cont">정식내용</li>
+      <li class="menu-cont"><%=baekdu1_1%></li>
       <li class="menu-sort">특식</li>
-      <li class="menu-cont">특식내용</li>
+      <li class="menu-cont"><%=baekdu1_3%></li>
       <li class="menu-sort">양식</li>
-      <li class="menu-cont">양식내용</li>
+      <li class="menu-cont"><%=baekdu1_5%></li>
       <li class="menu-sort">중식</li>
-      <li class="menu-cont">중식내용</li>
+      <li class="menu-cont"><%=baekdu1_4%></li>
     </ul>
   </div>
   <div data-title="화">
 <ul>
   <li class="menu-sort">정식</li>
-  <li class="menu-cont">정식내용</li>
+  <li class="menu-cont"><%=baekdu2_1%></li>
   <li class="menu-sort">특식</li>
-  <li class="menu-cont">특식내용</li>
+  <li class="menu-cont"><%=baekdu2_3%></li>
   <li class="menu-sort">양식</li>
-  <li class="menu-cont">양식내용</li>
+  <li class="menu-cont"><%=baekdu2_5%></li>
   <li class="menu-sort">중식</li>
-  <li class="menu-cont">중식내용</li>
+  <li class="menu-cont"><%=baekdu2_4%></li>
 </ul>
 </div>
 <div data-title="수">
 <ul>
 <li class="menu-sort">정식</li>
-<li class="menu-cont">정식내용</li>
+<li class="menu-cont"><%=baekdu3_1%></li>
 <li class="menu-sort">특식</li>
-<li class="menu-cont">특식내용</li>
+<li class="menu-cont"><%=baekdu3_3%></li>
 <li class="menu-sort">양식</li>
-<li class="menu-cont">양식내용</li>
+<li class="menu-cont"><%=baekdu3_5%></li>
 <li class="menu-sort">중식</li>
-<li class="menu-cont">중식내용</li>
+<li class="menu-cont"><%=baekdu3_4%></li>
 </ul>
 </div>
 <div data-title="목">
 <ul>
 <li class="menu-sort">정식</li>
-<li class="menu-cont">정식내용</li>
+<li class="menu-cont"><%=baekdu4_1%></li>
 <li class="menu-sort">특식</li>
-<li class="menu-cont">특식내용</li>
+<li class="menu-cont"><%=baekdu4_3%></li>
 <li class="menu-sort">양식</li>
-<li class="menu-cont">양식내용</li>
+<li class="menu-cont"><%=baekdu4_5%></li>
 <li class="menu-sort">중식</li>
-<li class="menu-cont">중식내용</li>
+<li class="menu-cont"><%=baekdu4_4%></li>
 </ul>
 </div>
 <div data-title="금">
 <ul>
   <li class="menu-sort">정식</li>
-  <li class="menu-cont">정식내용</li>
+  <li class="menu-cont"><%=baekdu5_1%></li>
   <li class="menu-sort">특식</li>
-  <li class="menu-cont">특식내용</li>
+  <li class="menu-cont"><%=baekdu5_3%></li>
   <li class="menu-sort">양식</li>
-  <li class="menu-cont">양식내용</li>
+  <li class="menu-cont"><%=baekdu5_5%></li>
   <li class="menu-sort">중식</li>
-  <li class="menu-cont">중식내용</li>
+  <li class="menu-cont"><%=baekdu5_4%></li>
 </ul>
 </div>
 
