@@ -1,6 +1,7 @@
 .top-bar {
   background-color: rgb(12, 80, 160);
-  height: 80px;
+  height: 7rem;
+
 }
 
 .top-bar button {
@@ -9,14 +10,46 @@
 
 .top-bar img {
   background-color: transparent;
-  height: 80px;
-  width: 80px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  height: 3rem;
+  width: 4rem;
 }
 
 .menu-name {
   font-size: 35px;
   color: white;
   text-align: right;
-  padding-right: 3%;
-  padding-top: 15px;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-slide ul {
+  padding-top: 5rem;
+  padding-left: 15px;
+}
+
+.menu-slide li {
+  background-color: rgb(225, 225, 225);
+  color: rgb(50, 50, 50);
+  list-style: none;
+  margin-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.menu-slide li:hover {
+  background-color: rgb(50, 50, 50);
+  color: #ffffff;
+}
+
+a:link {
+  text-decoration: none;
 }
