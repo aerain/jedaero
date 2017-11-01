@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.get('/baekdu', baekdu);
+app.get('/schoolfood', baekdu);
 app.get('/dormitory', dormitory);
 app.get('/haksa', haksa);
 app.get('/libsearch', libserch);
@@ -43,6 +43,9 @@ app.get('/version', function(req, res) {
 });
 app.get('/libreform', function(req, res) {
     res.render('info/libreform', { "title": "도서 검색" });
+});
+app.get('/template', function(req,res) {
+    res.render('template', {"title": "노답"});
 });
 
 // catch 404 and forward to error handler
