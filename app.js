@@ -13,6 +13,7 @@ var haksa = require('./routes/haksa');
 var libseat = require('./routes/libseat');
 var libserch = require('./routes/libserch');
 var timetable = require('./routes/timetable');
+var libdetail = require('./routes/libdetail');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.get('/haksa', haksa);
 app.get('/libsearch', libserch);
 app.get('/timetable', timetable);
 app.get('/libseat', libseat);
+app.get('/libdetail', libdetail);
 app.get('/version', function(req, res) {
     res.render('version', { "title": "제대로 버전" });
 });

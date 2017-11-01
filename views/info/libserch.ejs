@@ -1,46 +1,118 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset='utf-8'>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="/javascripts/search.js"> </script>
 </head>
-<body style="white-space:pre-line">
-<h1><%= title %></h1>
+<body>
+<style>
+    .search-form-input{
+        text-align: center;
 
-<form method='GET' id='search' action='/libsearch'>
-    <input name="keyword" id="keystr" placeholder="검색어를 입력하세요.">
-    <button onclick="document.getElementById('search').submit()">검색 이미지</button>
+    }
+    #search-keyword{
+        border : 1px solid #436abc;
+        height : 20%;
+        font-size : 15pt;
+    }
+    #search-submit{
+        border: 0;
+        padding: 0.5% 3% 0.25% 3%;
+        height : 5%;
+        margin: -1%;
+        background-color : #436abc;
+        color: #ffffff;
+
+    }
+    .result-list {
+
+        border-bottom: 1px solid #b8b4b4;
+        padding:1.5%;
+        width : 60%;
+    }
+
+    .result-id{
+        font-size: 15pt;
+        color:#436abc;
+    }
+    .result-author{
+        font-size :10pt;
+    }
+    .result-publication{
+        font-size : 10pt;
+    }
+    .result-name{
+        font-size: 11pt;
+        color:#436abc;
+    }
+    .result-volume{
+        font-size : 10pt;
+    }
+    .result-cState{
+        font-size: 11pt;
+        color:red;
+    }
+    .result-branchVolumes-no{
+        color:red;
+    }
+    #result{
+
+    }
+
+
+</style>
+<script>
+
+   var ss= document.getElementById("search-submit").onclick;
+   function show() {
+       if(ss==true)
+       {
+           document.getElementById('result').style.display ='block';
+       }
+   }
+
+
+
+
+
+</script>
+
+
+<form class="search-form" method='GET' id='search' action='/libsearch'>
+    <div class="search-form-input" >
+            <input name="keyword" id="search-keyword" placeholder="검색어를 입력하세요."required>
+            <input type="submit" value="검색"id="search-submit"onclick="document.getElementById('search').submit(show());">
+    </div>
 </form>
 
 <form method='GET' id='detail' action="/libdetail">
     <input type="hidden" name="id" id="libnumber">
+<br>
 
 <% if (code !== "success.noRecord") { %>
-    <table border="1">
+    <div id="result">
         <% for (var i = 0; i < data.list.length; i ++) { %>
-        <tr>
-            <td>
-                <a href="javascript:{}" onclick="document.getElementById('id').value = <%= data.list[i].id %>; document.getElementById('detail').submit();"><%= data.list[i].titleStatement %></a>
-            </td>
-            <td> <%= data.list[i].author %> </td>
-            <td> <%= data.list[i].publication %> </td>
+        <div class="result-list">
+            <span class="result-id"><a href="/libdetail?id=<%= data.list[i].id %>&keyword=<?keyword?>" onclick="document.getElementById('id').value = <%= data.list[i].id %>; document.getElementById('detail').submit();"><%= data.list[i].titleStatement %></a></span><br>
+            <span class="result-author"> <%= data.list[i].author %> </span><br>
+            <span class="result-publication"> <%= data.list[i].publication %> </span><br>
             <% if (JSON.stringify(data.list[i].branchVolumes) === "[]") { %>
-            <td colspan="3">
-            대출 가능 상태 판별 불가.
-             </td>
+                <span class="result-branchVolumes-no" >대출가능상태판별불가 </span><br>
             <% } else { %>
-            <td><%= data.list[i].branchVolumes[0].cState %></td>
-            <td> <%= data.list[i].branchVolumes[0].volume %> </td>
-            <td> <%= data.list[i].branchVolumes[0].name %> </td>
+            <span class="result-name"> <%= data.list[i].branchVolumes[0].name %> </span>
+            <span class="result-volume">[ <%= data.list[i].branchVolumes[0].volume %> ]</span>
+            <span class="result-cState"><%= data.list[i].branchVolumes[0].cState %></span>
+
             <% } %>
-        </tr>
+        </div>
+        <br>
     <% } %>
-    </table>
 <% } else { %>
     조회된 결과가 없습니다.
 <% }%>
+    </div>
 </form>
 </body>
 </html>
