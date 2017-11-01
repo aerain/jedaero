@@ -1,0 +1,14 @@
+.menu-slide {
+  width: 100px;
+  height: 207px;
+}
+
+.menu-slide li {
+  background-color: rgb(225, 225, 225);
+  margin-bottom: 3px;
+  color: rgb(50, 50, 50);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style: none;
+  text-align: center;
+}

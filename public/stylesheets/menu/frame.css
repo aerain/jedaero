@@ -1,0 +1,16 @@
+.top-bar {
+  background-color:  rgba(12, 80, 160,0.86);
+  height: 45px;
+}
+
+.top-bar img {
+  height: 45px;
+  width: 50px;
+}
+
+.menu-name {
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 10px;
+}

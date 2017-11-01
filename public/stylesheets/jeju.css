@@ -20,7 +20,6 @@ section {
 
 .wrapper {
   margin-top:66px;
-  padding: 1em;
   background-color: transparent;
 }
 
@@ -122,6 +121,7 @@ section {
   margin:0.2em;
   background-color:#3563e0;
   cursor:pointer;
+  font-size: large;
 }
 
 a:link, a:visited {
