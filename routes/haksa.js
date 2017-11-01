@@ -1,20 +1,30 @@
 var express = require('express');
 var router = express.Router();
+
 var request = require('request');
-const cheerio = require('cheerio');
+var cheerio = require('cheerio');
+var iconv = require('iconv-lite');
 var haksa = require('../public/javascripts/haksa');
 
 
-/* GET home page. */
-router.get('/haksa', function(req, res, next) {
-  today = new Date();
-  url = 'http://www.jejunu.ac.kr/camp/sai/academyschedule/' + today.getFullYear();
-  strjson = '';
-  request(url, function(error, response, html) {
-    if(!error){
-      var load = cheerio.load(html);
-      res.render('info/haksa', haksa(load));
-    }
-  });
+
+router.get('/haksa', function (req, res, next) {
+    var d = new Date();
+    url = "http://www.jejunu.ac.kr/camp/sai/academyschedule/" + d.getFullYear();
+    options = {
+      uri : url,        //request options
+      headers : {
+        "User-Agent" : "KHTML, like Gecko",
+        "encoding" : "null"
+      }
+    };
+    request(options, function (err, response, html) {
+        if (!err) {
+            var load = cheerio.load(html);
+            res.render('info/haksa', haksa(load));
+        }
+
+
+    });
 });
 module.exports = router;
