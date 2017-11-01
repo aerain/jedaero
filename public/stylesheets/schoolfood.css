@@ -1,49 +1,106 @@
-.menu {
-  margin: 5%;
-  font-weight: bold;
-  font-size: 55px;
+
+.menu h1 {
   text-align: center;
+  font-size:5rem;
 }
 
 .day-select {
   color: white;
-  font-size: 32px;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
   background-color: rgb(15, 100, 210);
 }
 
  .day li {
-   font-size: 32px;
    text-align: center;
    list-style: none;
    width: 20%;
    float: left;
-   margin-top: 4%;
-   margin-bottom: 4%;
-}
-
-.day li:hover {
-  background-color: rgb(148, 188, 248);
-  color: #ffffff;
+   margin-top: 10px;
+   margin-bottom: 10px;
 }
 
 .menu-sort {
-  font-size: 32px;
+  width: auto;
   clear: both;
   text-align: center;
   color: white;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: rgb(15, 100, 210);
+  font-size:4rem;
 }
 
 .menu-cont {
-  font-size: 25px;
-  border: 2px solid;
+  width: auto;
   text-align: center;
-  color: rgb(10, 50, 100);
-  padding-top: 2%;
-  padding-bottom: 2%;
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(255, 255, 255);
+  font-size:3rem;
+  white-space: pre-line;
 }
+
+ul > .slick-active {
+  background-color: rgb(15, 100, 210);
+  color:white;
+  /*원래 menu-cont색깔rgb(115,170,245)*/
+}
+
+.scroll-list {
+background-color: #efefef;
+width: 100%;
+height: 1px;
+overflow: auto;
+line-height:180%;
+text-align: left;
+
+
+}
+.scroll-list2 {
+background-color: #efefef;
+width: 100%;
+height: 1px;
+overflow: auto;
+line-height:180%;
+padding:10;
+}
+
+ul{
+list-style-type: none;
+padding-left: 0px;
+margin: 5px 5px;
+
+}
+.content {
+  font-size:2rem;
+}
+.slick-track{
+margin-bottom: 10rem;
+}
+/*.menu_container{
+<section id="menu_container">
+        <div class="content">
+          <div class="day-select">
+            요일선택
+          </div>
+          <div class="day">
+            <li>월</li>
+            <li>화</li>
+            <li>수</li>
+            <li>목</li>
+            <li>금</li>
+          </div>
+          <div class="menu-sort">정식</div>
+          <div class="menu-cont">정식내용</div>
+          <div class="menu-sort">특식</div>
+          <div class="menu-cont">특식내용</div>
+          <div class="menu-sort">양식</div>
+          <div class="menu-cont">양식내용</div>
+          <div class="menu-sort">중식/라면</div>
+          <div class="menu-cont">중식/라면내용</div>
+        </div>
+  </section>
+}*/

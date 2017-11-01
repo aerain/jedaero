@@ -1,0 +1,67 @@
+body{
+  font-family: HYKANB;
+  font-size:x-large;
+  width: 100%;
+  background-color: white;
+  margin:auto;
+}
+
+.menu h3 {
+  text-align: center;
+  margin-top:20px;
+  margin-bottom:15px;
+  color: rgba(12, 80, 160,1);
+}
+
+.day-select {
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: rgba(12, 80, 160,0.86);
+}
+
+.day li {
+
+  list-style: none;
+  width: 20%;
+  height: 30px;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.day2 li {
+  text-align: center;
+  list-style: none;
+  width: 13.5%;
+  height: 30px;
+  float: left;
+  margin-top: 1px;
+  margin-bottom: 8px;
+
+}
+
+.menu-sort {
+  clear: both;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  background-color: rgba(12, 80, 160,0.86);
+}
+
+.menu-cont {
+
+  height:auto;
+  text-align: center;
+  color: black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+}
+
+.back {
+  width:100%;
+  margin: auto;
+}
