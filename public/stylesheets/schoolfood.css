@@ -40,6 +40,7 @@
   padding-bottom: 5px;
   background-color: rgb(255, 255, 255);
   white-space: pre-line;
+  font-size:1.2rem;
 }
 
 ul > .slick-active {
@@ -75,7 +76,7 @@ margin: 5px 5px;
 }
 
 .slick-track{
-margin-bottom: 10rem;
+margin-bottom: 1rem;
 }
 /*.menu_container{
 <section id="menu_container">
