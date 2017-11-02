@@ -10,6 +10,41 @@
     <title>
       shuttlebus
     </title>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+    function startCateScrollScroll(target) {
+          setTimeout("slideCateScroll('"+target+"')", 10);
+    }
+    function slideCateScroll(target) {
+        var Sel_Height=350;
+            el = document.getElementById(target);
+        if (el.heightPos == null || (el.isDone && el.isOn == false)) {
+            el.isDone = false;
+            el.heightPos = 1;
+            el.heightTo = Sel_Height;
+        } else if (el.isDone && el.isOn){
+            el.isDone = false;
+            el.heightTo = 1;
+        }
+        if (Math.abs(el.heightTo - el.heightPos) > 1) {
+            el.heightPos += (el.heightTo - el.heightPos) / 10;
+            el.style.height = el.heightPos + "px";
+            startCateScrollScroll(target);
+        } else {
+        if (el.heightTo == Sel_Height) {
+            el.isOn = true;
+        } else {
+            el.isOn = false;
+        }
+            el.heightPos = el.heightTo;
+            // el.style.height = el.heightPos + "px";
+            el.isDone = true;
+        }
+    }
+
+
+    //-->
+    </SCRIPT>
   </head>
   <body>
     <!-- Toolbar -->
@@ -63,7 +98,7 @@
   			<div class="bus_A">
   				<div class="A_icon">
   					<span class="bus_name"><strong>A(시계)</strong></span><br>
-  					<img src="bus_icon.png"></img>
+  					<img src="img/bus_icon.png"></img>
   				</div>
   				<div class="A_time">
   					<span class="time1">5분전</span><br>
@@ -77,7 +112,7 @@
   				</div>
   				<div class="B_icon">
   					<span class="bus_name"><strong>B(반시계)</strong></span><br>
-  					<img src="bus_icon.png"></img>
+  					<img src="img/bus_icon.png"></img>
   				</div>
   				</div>
   			</div>

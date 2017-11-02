@@ -53,6 +53,9 @@ app.get('/food_sort', function(req,res) {
 app.get('/shuttlebus', function(req,res) {
     res.render('info/shuttlebus', {"title": "순환버스"});
 });
+app.get('/shuttlebus2', function(req,res) {
+    res.render('info/bussoyoung', {"title": "순환버스"});
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
