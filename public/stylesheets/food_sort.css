@@ -1,13 +1,26 @@
 .list{
-  font-size: 400%;
+  font-size: 4rem;
   font-style: bold;
+  text-align: center;
+  font-weight: bold;
+  margin: auto;
+  width: 65%;
   }
 .new_build{
-height: 10rem;
+  height: 10rem;
+  margin:5rem 2rem 2rem 2rem;
 }
 .snack{
   height: 10rem;
+  margin:2rem 2rem 5rem 2rem;
 }
 .list_food{
   height: 10rem;
+  margin: 2rem;
+  vertical-align: middle;
+}
+.list img{
+  width: 7rem;
+  float: left;
+
 }
