@@ -1,15 +1,137 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset='utf-8'>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body style="white-space:normal">
-    <h1><%= title %></h1>
-    <p>학사래요 ㅎ </p>
-    <%= month[0].schedule[0].haksa %>
-    <%= month[0].schedule[1].haksa %>
 
-  </body>
+<head>
+  <meta charset='utf-8'>
+  <script src="/javascripts/jquery-2.1.3.min.js"></script>
+  <script src="/javascripts/materialsidebar.min.js"></script>
+  <script src="/javascripts/webslider.js"></script>
+  <link rel="stylesheet" href="stylesheets/frame.css">
+  <title>
+    <%= title %>
+  </title>
+
+
+  <style media="screen">
+
+    .haksa {
+      max-height: 0px;
+      padding: 0px;
+      margin: 0px;
+      width: 100%;
+      overflow: hidden;
+      transition: 0.5s;
+
+    }
+
+
+
+
+    button {
+      padding: 0.4rem;
+      font-size: 2rem;
+      line-height: 3rem;
+      background-color: skyblue;
+      border-style: none;
+      border-bottom: solid 1px;
+      width: 100%;
+      height: auto;
+    }
+
+    .show {
+      max-height: 1000px;
+
+      transition: 0.5s;
+    }
+    .haksaday{
+      background-color: #CCCCCC;
+    }
+    .haksaschedule{
+
+    }
+    .haksa>div{
+      font-size: 1.7rem;
+    }
+    .haksatitle{
+      height: auto;
+      width: auto;
+
+    }
+    .haksatitle>h1{
+      text-align: center;
+    }
+  </style>
+
+
+</head>
+
+<body style="white-space:normal">
+  <!-- Toolbar -->
+    <div class="top-bar">
+      <div id="open-sb">
+      <img src="img/menu_button.png" alt="menu-button" align="left">
+    </div>
+      <div class="menu-name">
+        제대로 가자
+      </div>
+    </div>
+
+  <!-- Slidebar -->
+  <section class="sidebar">
+    <div class="menu-slide" align="left">
+      <ul>
+       <a href="/"><li class="home">홈</li></a>
+       <a href="#"><li class="bus">순환버스</li></a>
+       <a href="#"><li class="schedule">학사일정</li></a>
+       <a href="food_sort"><li class="food">뭐먹을까</li></a>
+       <a href="#"><li class="library">중도좌석</li></a>
+       <a href="#"><li class="book">도서검색</li></a>
+      </ul>
+     </div>
+   </section>
+  <div class="haksatitle">
+  <h1><%= title %></h1>
+  </div>
+
+
+
+
+    <%for(i = 0; i < month.length; i++){%>
+      <button id="month<%=i%>btn">
+        <%if(i<12){%>
+        <%=i+1%>
+      <%}else{%>
+        2018년   <%=i-11%>
+      <%}%>월
+      </button>
+      <ul class="haksa"id="month<%=i%>li">
+        <% for (j = 0; j < (month[i].schedule.length / 2); j++) { %>
+          <div class="haksaday">
+            <%=month[i].schedule[2 * j].haksa %>
+          </div>
+
+          <div class="haksaschedule">
+            <%=month[i].schedule[2 * j + 1].haksa %>
+
+          </div>
+
+          <% } %>
+
+      </ul>
+    <%}%>
+
+  <script type="text/javascript">
+<%for(a = 0; a < 15; a++){%>
+    document.getElementById("month"+<%=a%>+"btn").onclick = function() {
+      btn<%=a%>()
+    };
+
+    function btn<%=a%>() {
+      document.getElementById("month"+<%=a%>+"li").classList.toggle("show");
+    }
+<%}%>
+  </script>
+
+</body>
+
 </html>
