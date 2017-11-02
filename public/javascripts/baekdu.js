@@ -12,6 +12,6 @@ module.exports = function ($) {
   });
   strjson += '"blank" : ""}';
   strjson = strjson.replace(/\n/gi, '\\r\\n');
-  console.log(strjson);
+  console.log(JSON.parse(strjson));
   return JSON.parse(strjson);
 }

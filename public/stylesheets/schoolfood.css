@@ -1,7 +1,6 @@
 
 .menu h1 {
   text-align: center;
-  font-size:5rem;
 }
 
 .day-select {
@@ -29,7 +28,8 @@
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: rgb(15, 100, 210);
-  font-size:4rem;
+  font-size:1.5rem;
+  font-weight:bold;
 }
 
 .menu-cont {
@@ -39,7 +39,6 @@
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: rgb(255, 255, 255);
-  font-size:3rem;
   white-space: pre-line;
 }
 
@@ -74,9 +73,7 @@ padding-left: 0px;
 margin: 5px 5px;
 
 }
-.content {
-  font-size:2rem;
-}
+
 .slick-track{
 margin-bottom: 10rem;
 }
