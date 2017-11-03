@@ -38,7 +38,9 @@
    </section>
 
    <div class="wrapper">
-     <%= restdata[0].name %>
+     <% for(i=1; i < restdata.length; i++) { %>
+     <p><%= restdata[i].name %></p>
+     <%}%>
    </div>
   </body>
 </html>
