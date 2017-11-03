@@ -9,8 +9,6 @@ var request = require('request');
 router.get('/libdetail', function(req, res, next) {
     search = req.query.id;
     detailjson = {};
-    twodetailjson = {};
-    jsonarray = new Array();
 
     url = "http://lib.jejunu.ac.kr/pyxis-api/1/collections/1/search";
     viewurl= "http://lib.jejunu.ac.kr/pyxis-api/1/biblios/732900/items";
@@ -22,12 +20,11 @@ router.get('/libdetail', function(req, res, next) {
     request(url, function(err, response, html) {
         if(!err) {
             bookjson = JSON.parse(html);
-
             for (i = 0; i < bookjson.data.list.length; i++) {
 
                 if (bookjson.data.list[i].id == req.query.id) {
                     detailjson["title"] = bookjson.data.list[i].titleStatement;
-
+                    detailjson["type"] = bookjson.data.list[i].biblioType.name;
                     detailjson["author"] = bookjson.data.list[i].author;
                     detailjson["publish"] = bookjson.data.list[i].publication;
 
@@ -42,22 +39,24 @@ router.get('/libdetail', function(req, res, next) {
         request(viewurl,function (err, ress, html) {
             if(!err){
                 Bookjson = JSON.parse(html);
-                console.log(JSON.stringify(Bookjson.data[detailjson.branch.id][2]));
-                for (i=0; i < Bookjson.data[detailjson.branch.id].length; i++) {
-                    twodetailjson["location"] = Bookjson.data[detailjson.branch.id][i].location.name;
-                    twodetailjson["Callno"] = Bookjson.data[detailjson.branch.id][i].callNo;
-                    twodetailjson["State"] = Bookjson.data[detailjson.branch.id][i].circulationState.name;
-                    console.log(twodetailjson);
-                    jsonarray.push(twodetailjson);
+                for (i=0; i < Bookjson.data[detailjson.branch.id].length;i++) {
+
                 }
-                console.log(jsonarray);
+
+                  //  console.log(twodetailjson);
+
+
+                console.log(Bookjson);
+                res.render('info/libdetail', {
+                    prevbook : detailjson,
+                    bookdetail : Bookjson
+                });
 
             }
-
-        })
+        });
     });
 
-    res.render('info/libdetail', { title: '제주대학교 필수 어플 - 제대로 가자' });
+
 });
 
 module.exports = router;
