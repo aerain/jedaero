@@ -57,21 +57,25 @@
     .result-branchVolumes-no{
         color:red;
     }
-    #result{
-
-    }
 
 
 </style>
 <script>
+    var ss = document.getElementById('search').submit();
+    var s = document.getElementById('search-submit').onclick;
+        function asd() {
+            document.getElementById('search').submit();
+            if(ss== true)
+            {
+                document.getElementById('result').style.display='block';
+            }
+            else
+            {
+                document.getElementById('result').style.display='none';
+            }
+        }
 
-   var ss= document.getElementById("search-submit").onclick;
-   function show() {
-       if(ss==true)
-       {
-           document.getElementById('result').style.display ='block';
-       }
-   }
+
 
 
 
@@ -83,7 +87,7 @@
 <form class="search-form" method='GET' id='search' action='/libsearch'>
     <div class="search-form-input" >
             <input name="keyword" id="search-keyword" placeholder="검색어를 입력하세요."required>
-            <input type="submit" value="검색"id="search-submit"onclick="document.getElementById('search').submit(show());">
+            <input type="submit" value="검색"id="search-submit" onclick="asd();">
     </div>
 </form>
 
@@ -110,7 +114,7 @@
         <br>
     <% } %>
 <% } else { %>
-    조회된 결과가 없습니다.
+    조회된 결과가 없습니다. a
 <% }%>
     </div>
 </form>
