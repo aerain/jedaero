@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="jeju.css" />
+
+	<script src="jquery-2.1.3.min.js"></script>
+	<script src="materialsidebar.min.js"></script>
+
+	<script>
+		$(function() {
+
+			$('.sidebar').materialSidebar({
+				settings: {
+					opener: '#open-sb',
+					wrapper: '.wrapper'
+				},
+				sidebar: {
+					align: 'left',
+					width: 300,
+					closingLinks: '#closeButton2'
+				}
+			});
+
+		});
+
+		function closeSidebar() {
+			var nsbw = $('.sidebar').width();
+			var duration = 500;
+			var easing = 'swing';
+			var overflowFalse = function() {
+				$('body, html').css({
+					overflow: 'auto'
+				});
+			};
+
+			animationReset = {
+				marginRight: '+=' + nsbw,
+				marginLeft: '-=' + nsbw
+			};
+
+			$('.sidebar').animate(animationReset, {
+				duration: duration,
+				easing: easing,
+				complete: overflowFalse
+			});
+
+			var maskDiv = $('body').children().filter(function() {
+				return $(this).data('ssbplugin') === 'mask';
+			});
+
+			maskDiv.fadeOut();
+
+			//$('.sidebar').hide();
+		}
+	</script>
+
+	<style type="text/css">
+	.wrapper{
+		margin-top: 50px;
+		margin-bottom: 30px;
+		padding: 1em;
+	}
+	.scroll-list {
+		background-color: #D9E5FF;
+		width: 100%;
+		height: 0px;
+		overflow: auto;
+		line-height:180%;
+	}
+	.scroll-list2 {
+		background-color: #D9E5FF;
+		width: 100%;
+		height: 1px;
+		overflow: auto;
+		line-height:180%;
+		padding:10;
+	}
+	.slide{
+		list-style-type: none;
+		font-size: 150%;
+	}
+	.menu_s{
+		background-color:white;
+		width:100%;
+		padding:2%;
+		color:black;
+		border:1px solid black;
+		border-radius:5px;
+		font-size: 150%;
+	}
+	.bus_A{
+		 background-color: RGBA(41,128,185,0.66);
+		 height:20%;
+		 width:100%;
+		 padding: 10px;
+		 color:black;
+		 border:1px solid #9DCEFF;
+		 border-radius:5px;
+		 position: relative;
+	}
+	.bus_B{
+		 background-color:RGBA(41,128,185,0.66);
+		 width:100%;
+		 height:20%;
+		 padding: 10px;
+		 color:black;
+		 border:1px solid #9DCEFF;
+		 border-radius:5px;
+		 position: relative;
+	}
+	.A_icon{
+		display: inline-block;
+		padding-right: 5px;
+		padding-left: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-size: 210%;
+		width: 50%;
+
+	}
+	.A_time{
+		display: inline-block;
+		padding-top: 15%;
+		padding-bottom: 10%;
+		padding-left: 0;
+		padding-right: 0;
+		float: right;
+	}
+	.B_icon{
+		display: inline-block;
+		padding-right: 0;
+		padding-left: 5px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-size: 210%;
+		width: 50%;
+	}
+	.B_time{
+		display: inline-block;
+		padding-top: 15%;
+		padding-bottom: 10%;
+		padding-left:0;
+		padding-right: 0;
+		float: left;
+	}
+	img{
+		height: 70%;
+		width: 70%;
+		margin-top: 10px;
+	}
+	.bus_name{
+		color: RGB(64,83,113);
+	}
+	.time1{
+		color: white;
+		font-size: 250%;
+	}
+	.time2{
+		color: white;
+		font-size: 120%;
+	}
+	</style>
+
+	<SCRIPT LANGUAGE="JavaScript">
+	function startCateScrollScroll(target) {
+			setTimeout("slideCateScroll('"+target+"')", 10);
+	}
+	function slideCateScroll(target) {
+		var Sel_Height=300;
+				el = document.getElementById(target);
+		if (el.heightPos == null || (el.isDone && el.isOn == false)) {
+				el.isDone = false;
+				el.heightPos = 1;
+				el.heightTo = Sel_Height;
+		} else if (el.isDone && el.isOn){
+				el.isDone = false;
+				el.heightTo = 1;
+		}
+		if (Math.abs(el.heightTo - el.heightPos) > 1) {
+				el.heightPos += (el.heightTo - el.heightPos) / 10;
+				el.style.height = el.heightPos + "px";
+				startCateScrollScroll(target);
+		} else {
+		if (el.heightTo == Sel_Height) {
+				el.isOn = true;
+		} else {
+				el.isOn = false;
+		}
+				el.heightPos = el.heightTo;
+				el.style.height = el.heightPos + "px";
+				el.isDone = true;
+		}
+	}
+	</SCRIPT>
+</head>
+
+<body>
+	<div class="toolbar">
+		<div id="open-sb" class="menu-button menu-left"></div>
+	</div>
+
+  <section class="sidebar">
+    <nav>
+      <div class="button" id="closeButton1" onclick="closeSidebar()">X</div>
+      <ul id="list01">
+        <li><a href="#">학사일정</a></li>
+        <li><a href="#">뭐넣지</a></li>
+        <li><a href="#">아무거나넣어요</a></li>
+      </ul>
+    </nav>
+  </section>
+
+	<div class="wrapper">
+		<div id="main-wrapper">
+				<center>
+			    <div class="menu_s" href=# onclick="slideCateScroll('scroll-list')"><B>정문</B></div>
+			    <div id="scroll-list" class="scroll-list">
+			  <center>
+			    <ul class="slide">
+			      <li>정문<br></li>
+			      <li>제2도서관<br></li>
+			      <li>해대1호관<br></li>
+			      <li>교양동<br></li>
+			      <li>공대4호관<br></li>
+			      <li>의전원<br></li>
+			      <li>중앙도서관<br></li>
+			      <li>인문대학(동)<br></li>
+			      <li>학생생활관<br></li>
+			      <li>인문대학(서)<br></li>
+			      <li>학생회관<br></li>
+			      <li>본관<br></li>
+			    </ul>
+			  </center></div><br>
+
+			<div class="bus_A">
+				<div class="A_icon">
+					<span class="bus_name"><strong>A(시계)</strong></span><br>
+					<img src="bus_icon.png"></img>
+				</div>
+				<div class="A_time">
+					<span class="time1">5분전</span><br>
+					<span class="time2">다음버스 25분전</span>
+				</div>
+			</div><br>
+			<div class="bus_B">
+				<div class="B_time">
+					<span class="time1">15분전</span><br>
+					<span class="time2">다음버스 35분전</span>
+				</div>
+				<div class="B_icon">
+					<span class="bus_name"><strong>B(반시계)</strong></span><br>
+					<img src="bus_icon.png"></img>
+				</div>
+				</div>
+			</div>
+		</center>
+		<p><br> * 버스 사정에 따라 차이가 있을 수 있음</p><br>
+		</div>
+
+		<div class="underbar">
+		</div><br><br>
+	</div>
+</body>
+
+</html>

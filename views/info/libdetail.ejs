@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset='utf-8'>
-    <title><%= title %></title>
+    <title>바부</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <style>
@@ -26,25 +26,28 @@
         list-style-type:none;
     }
     .detail-form-typeresult,.detail-form-Signatureresult
-    ,.detail-form-authorresult,.detail-form-volumeresult{
+    ,.detail-form-authorresult,.detail-form-volumeresult
+    ,.detail-form-publish{
         border-bottom: 1px solid #b8b4b4;
     }
     .detail-form-type-result,.detail-form-Siganture-result
-    ,.detail-form-author-result,.detail-form-volume-result{
+    ,.detail-form-author-result,.detail-form-volume-result
+    ,.detail-form-pub-result
+    {
 
         padding:1.5%;
         margin-left: 5%;
 
     }
     .detail-form-type,.detail-form-Signature,
-    .detail-form-volume,.detail-form-author{
+    .detail-form-volume,.detail-form-author,.detail-form-pub{
         font-size:17pt;
         color:#7c7979;
     }
     .detail-form-type,.detail-form-volume{
         word-spacing : 2.4rem;
     }
-    .detail-form-author{
+    .detail-form-author,.detail-form-pub{
         word-spacing: 5.2rem;
     }
     .intestine-form-infomation{
@@ -89,19 +92,24 @@
     <ul class="detail-form">
         <li class ="detail-form-typeresult">
             <label class="detail-form-type">자료 유형</label>
-            <span class="detail-form-type-result">국내단행본</span>
+            <span class="detail-form-type-result"><%= detailjson.type %></span>
         </li>
         <li class ="detail-form-Signatureresult">
             <label class="detail-form-Signature">서명책임사항</label>
-            <span class="detail-form-Siganture-result">소나기/ 황순원 글 : 강요배 그림</span>
+            <span class="detail-form-Siganture-result"><%=detailjson.title%>/<%=detailjson.author%></span>
         </li>
+
         <li class="detail-form-authorresult">
             <label class="detail-form-author">저 자</label>
-            <span class="detail-form-author-result">황순원</span>
+            <span class="detail-form-author-result"><%=detailjson.author%></span>
+        </li>
+        <li class="detail-form-publish">
+            <label class="detail-form-pub">출 판</label>
+            <span class="detail-form-pub-result"><%= detailjson.publish%></span>
         </li>
         <li class="detail-form-volumeresult">
             <label class="detail-form-volume">청구 기호</label>
-            <span class="detail-form-volume-result">813.8ㅎ761ㅅ</span>
+            <span class="detail-form-volume-result"><%=detailjson.branch.volume %></span>
         </li>
     </ul>
 
@@ -111,10 +119,11 @@
 
 
     <div class="cState">
-        <strong class="cState-name-result">교육대학분관</strong>
+        <strong class="cState-name-result"><%= Bookjson.data[detailjson.branch.id][0].branch.name %></strong>
     </div>
 
     <table class="cStateandresult">
+
         <thead class="cState-Bundle">
         <tr class="cState-name">
             <th class="number">등록번호</th>
@@ -123,32 +132,23 @@
             <th class="status">상태</th>
         </tr>
         </thead>
+        <% for(var i=0; i<Bookjson.data[detailjson.branch.id].length; i++) { %>
         <tbody class="cState-result-Bundle">
+
         <tr class="cState-result">
-            <td class="number-result">1062628</td>
-            <td class="name-result">제1,2자료실(2층)</td>
-            <td class="volumes-result">813.8ㅎ761ㅅ</td>
-            <td class="status-result">대출가능</td>
+            <td class="number-result"><%= Bookjson.data[detailjson.branch.id][i].barcode %></td>
+            <td class="name-result"><%= Bookjson.data[detailjson.branch.id][i].location.name %></td>
+            <td class="volumes-result"><%= Bookjson.data[detailjson.branch.id][i].callNo %></td>
+            <td class="status-result"><%= Bookjson.data[detailjson.branch.id][i].circulationState.name %></td>
         </tr>
+        <%}%>
     </tbody>
-        <tbody class="cState-result-Bundle">
-        <tr class="cState-result">
-            <td class="number-result">1062629</td>
-            <td class="name-result">제1,2자료실(2층)</td>
-            <td class="volumes-result">813.8ㅎ761ㅅ=2</td>
-            <td class="status-result">대출가능</td>
-        </tr>
-        </tbody>
-        <tbody class="cState-result-Bundle">
-        <tr class="cState-result">
-            <td class="number-result">1062630</td>
-            <td class="name-result">보존자료(1층 벽면)</td>
-            <td class="volumes-result">813.8ㅎ761ㅅ=3</td>
-            <td class="status-result">대출가능</td>
-        </tr>
-        </tbody>
+
     </table>
+
 </div>
+
+<%= JSON.stringify(detailjson) %>
 </body>
 
 
