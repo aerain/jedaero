@@ -39,6 +39,8 @@ app.get('/timetable', timetable);
 app.get('/libseat', libseat);
 app.get('/libdetail', libdetail);
 app.get('/food', food);
+app.get('/schoolfood', baekdu);
+app.get('/dormitory', dormitory);
 app.get('/version', function(req, res) {
     res.render('version', { "title": "제대로 버전" });
 });
