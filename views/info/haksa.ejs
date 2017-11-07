@@ -6,7 +6,7 @@
   <script src="/javascripts/materialsidebar.min.js"></script>
   <script src="/javascripts/webslider.js"></script>
   <link rel="stylesheet" href="stylesheets/frame.css">
-    <link rel="stylesheet" href="stylesheets/haksa.css">
+  <link rel="stylesheet" href="stylesheets/haksa.css">
   <title>
     학사일정
   </title>
@@ -31,8 +31,8 @@
        <a href="shuttlebus"><li class="bus">순환버스</li></a>
        <a href="haksa"><li class="schedule">학사일정</li></a>
        <a href="food_sort"><li class="food">뭐먹을까</li></a>
-       <a href="#"><li class="library">중도좌석</li></a>
-       <a href="#"><li class="book">도서검색</li></a>
+       <a href="libseat"><li class="library">중도좌석</li></a>
+       <a href="libreform"><li class="book">도서검색</li></a>
       </ul>
      </div>
    </section>
@@ -42,7 +42,7 @@
   <%= title %>
   </div>
 
-    <%for(i = 0; i < month.length; i++){%>
+    <!-- <%for(i = 0; i < month.length; i++){%>
       <button id="month<%=i%>btn">
         <%if(i<12){%>
         <%=i+1%>
@@ -76,7 +76,7 @@
       document.getElementById("month"+<%=a%>+"li").classList.toggle("show");
     }
 <%}%>
-  </script>
+  </script> -->
 
 </body>
 

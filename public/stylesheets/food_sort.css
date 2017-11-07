@@ -5,36 +5,44 @@
   margin: auto;
   width: 95%;
   }
-  .name{
-    margin: 2rem 0rem 3rem 3rem;
-  }
+
 .new_build{
   height: 1rem;
   margin:1rem 2rem 2rem 2rem;
   padding-top: 1rem;
 }
+
 .snack{
   height: 1rem;
   margin: 3rem 2rem 2rem 2rem;
   padding-top: 1rem;
 }
+
 .list_food{
   height: 1rem;
   margin: 3rem 2rem 2rem 2rem;
   padding-top: 1rem;
 }
+
 .list img{
   width: 3rem;
   float: left;
   margin-top: 1rem;
   margin-left: 2.5rem;
 }
+
+.name{
+    margin: 2rem 0rem 3rem 3rem;
+  }
+
 a:active{
   color: black;
 }
+
 a:link{
   color:black;
 }
+
 a:visited{
   color:black;
 }
