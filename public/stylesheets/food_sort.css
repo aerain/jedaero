@@ -34,6 +34,7 @@ a:active{
 }
 a:link{
   color:black;
+  margin-top: 1rem;
 }
 a:visited{
   color:black;
