@@ -57,6 +57,9 @@ app.get('/food_sort', function(req,res) {
 app.get('/shuttlebus', function(req,res) {
     res.render('info/shuttlebus', {"title": "순환버스"});
 });
+app.get('/lib-bus', function(req,res) {
+    res.render('info/Rlib-bus', {"title": "야간버스"});
+});
 app.get('/haksa', function(req,res) {
     res.render('info/haksa', {"title": "학사일정"});
 });
