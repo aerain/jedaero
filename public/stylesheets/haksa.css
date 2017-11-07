@@ -1,0 +1,41 @@
+.haksa {
+  max-height: 0px;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+button {
+  padding: 0.4rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  background-color: skyblue;
+  border-style: none;
+  border-bottom: solid 1px;
+  width: 100%;
+  height: auto;
+}
+
+.show {
+  max-height: 1000px;
+  transition: 0.5s;
+}
+
+.haksaday{
+  background-color: #CCCCCC;
+}
+
+.haksa>div{
+  font-size: 1.7rem;
+}
+
+.haksatitle{
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  height: auto;
+  width: auto;
+  text-align: center;
+}

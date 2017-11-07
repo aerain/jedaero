@@ -7,13 +7,13 @@ router.get('/food', function(req, res, next) {
   list = req.query.list;
 
   if (list === "hansik") {
-    foodjson:GETJSON = new GETJSON("../public/json/hansik.json");
+    foodjson = require('../public/json/hansik.json');
   } else if (list === "chicken") {
-
+    foodjson = require('../public/json/chicken.json');
   } else if (list === "gansik") {
-
+    foodjson = require('../public/json/gansik.json');
   } else if (list === "etc") {
-
+    foodjson = require('../public/json/etc.json');
   } else {
     foodjson = {title: '제주대학교 필수 어플 - 제대로 가자'};
   }

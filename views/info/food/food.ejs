@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
+    <meta name="viewport" id="viewport" content="width=device-width, height=device-height, user-scalable=no" />
     <script src="/javascripts/jquery-2.1.3.min.js"></script>
   	<script src="/javascripts/materialsidebar.min.js"></script>
   	<script src="/javascripts/webslider.js"></script>
@@ -10,6 +10,56 @@
     <title>
       frame
     </title>
+    <style media="screen">
+      .menupan{
+        border-width: medium;
+        border-style: solid;
+        width: 70%;
+        margin-top: 1rem;
+        padding: 0px;
+        font-size: 2rem;
+        display: inline-block;
+        height: 5rem;
+        vertical-align: middle;
+      }
+
+      .menupan:hover{
+        background-color: #CCCCCC;
+      }
+      .wrapper{
+        text-align: center;
+
+      }
+
+
+
+      .foodcard{
+        overflow: hidden;
+        width: 0;
+        height: 60%;
+        position: fixed;
+        top:20%;
+        right: 0;
+        transition: 0.3s
+
+      }
+
+      <% for(i=1; i < restdata.length; i++) {%>
+           #card<%=i%>{
+             background-image: image(<%= restdata[i].images %>);
+             background-size: cover;
+           }
+           <%}%>
+      .foodimg{
+
+      }
+ <% for(i=1; i < restdata.length; i++) {%>
+      #menu<%=i%>:hover #card<%=i%>{
+        width: 15rem;
+      }
+      <%}%>
+
+    </style>
   </head>
   <body>
 
@@ -29,16 +79,30 @@
       <ul>
        <a href="/"><li class="home">홈</li></a>
        <a href="#"><li class="bus">순환버스</li></a>
-       <a href="#"><li class="schedule">학사일정</li></a>
+       <a href="haksa"><li class="schedule">학사일정</li></a>
        <a href="food_sort"><li class="food">뭐먹을까</li></a>
        <a href="#"><li class="library">중도좌석</li></a>
        <a href="#"><li class="book">도서검색</li></a>
       </ul>
      </div>
    </section>
-
    <div class="wrapper">
-     <%=title %>
+     <% for(i=1; i < restdata.length; i++) { %>
+     <div class="menupan"id="menu<%=i%>"><%= restdata[i].name %>
+
+
+          <div class="foodcard" id="card<%=i%>">
+
+           <img src="<%= restdata[i].images %>"  class="foodimg">
+           <%= restdata[i].tel %><%= restdata[i].name %>
+          </div>
+
+     </div>
+     <%}%>
    </div>
+
+
+
+
   </body>
 </html>

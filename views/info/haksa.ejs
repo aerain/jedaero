@@ -1,71 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset='utf-8'>
   <script src="/javascripts/jquery-2.1.3.min.js"></script>
   <script src="/javascripts/materialsidebar.min.js"></script>
   <script src="/javascripts/webslider.js"></script>
   <link rel="stylesheet" href="stylesheets/frame.css">
+  <link rel="stylesheet" href="stylesheets/haksa.css">
   <title>
-    <%= title %>
+    학사일정
   </title>
-
-
-  <style media="screen">
-
-    .haksa {
-      max-height: 0px;
-      padding: 0px;
-      margin: 0px;
-      width: 100%;
-      overflow: hidden;
-      transition: 0.5s;
-
-    }
-
-
-
-
-    button {
-      padding: 0.4rem;
-      font-size: 2rem;
-      line-height: 3rem;
-      background-color: skyblue;
-      border-style: none;
-      border-bottom: solid 1px;
-      width: 100%;
-      height: auto;
-    }
-
-    .show {
-      max-height: 1000px;
-
-      transition: 0.5s;
-    }
-    .haksaday{
-      background-color: #CCCCCC;
-    }
-    .haksaschedule{
-
-    }
-    .haksa>div{
-      font-size: 1.7rem;
-    }
-    .haksatitle{
-      height: auto;
-      width: auto;
-
-    }
-    .haksatitle>h1{
-      text-align: center;
-    }
-  </style>
-
-
 </head>
-
 <body style="white-space:normal">
+
   <!-- Toolbar -->
     <div class="top-bar">
       <div id="open-sb">
@@ -81,22 +28,21 @@
     <div class="menu-slide" align="left">
       <ul>
        <a href="/"><li class="home">홈</li></a>
-       <a href="#"><li class="bus">순환버스</li></a>
-       <a href="#"><li class="schedule">학사일정</li></a>
+       <a href="shuttlebus"><li class="bus">순환버스</li></a>
+       <a href="haksa"><li class="schedule">학사일정</li></a>
        <a href="food_sort"><li class="food">뭐먹을까</li></a>
-       <a href="#"><li class="library">중도좌석</li></a>
-       <a href="#"><li class="book">도서검색</li></a>
+       <a href="libseat"><li class="library">중도좌석</li></a>
+       <a href="libreform"><li class="book">도서검색</li></a>
       </ul>
      </div>
    </section>
+
+
   <div class="haksatitle">
-  <h1><%= title %></h1>
+  <%= title %>
   </div>
 
-
-
-
-    <%for(i = 0; i < month.length; i++){%>
+    <!-- <%for(i = 0; i < month.length; i++){%>
       <button id="month<%=i%>btn">
         <%if(i<12){%>
         <%=i+1%>
@@ -130,7 +76,7 @@
       document.getElementById("month"+<%=a%>+"li").classList.toggle("show");
     }
 <%}%>
-  </script>
+  </script> -->
 
 </body>
 

@@ -22,7 +22,7 @@ router.get('/libseat', function (req, res, next) {
             var strContents = new Buffer(html);
             html = iconv.decode(strContents, 'EUC-KR').toString();// iconv options
             var load = cheerio.load(html);
-            res.render('info/libseat', libseat(load));
+            res.render('info/lib', libseat(load));
         }
 
 

@@ -1,0 +1,42 @@
+{
+  "restdata":[
+    {
+      "name":"1번가 2마리 치킨",
+      "images":"img/chicken/1st2chicken.png",
+      "tel":"064-000-0000"
+    },
+    {
+      "name":"멕시카나 치킨",
+      "images":"img/chicken/mexicana.png",
+      "tel":"064-000-0000"
+    },
+    {
+      "name":"명품치킨",
+      "images":"img/chicken/myeongpoom.png",
+      "tel":"064-000-0000"
+    },
+    {
+      "name":"본초불닭발",
+      "images":"img/chicken/bonchobul.jpg",
+      "tel":"064-000-0000"
+    },
+    {
+      "name":"숲노을치킨",
+      "images":"img/chicken/forest.png",
+      "tel":"064-000-0000"
+    },
+    {
+      "name":"엄마치킨",
+      "images":"img/chicken/mother.png",
+      "tel":"064-000-0000"
+    },
+    {
+      "name":"푸라닭치킨",
+      "images":"img/chicken/puradak.png",
+      "tel":"064-000-0000"
+    }
+
+
+
+    ]
+}
