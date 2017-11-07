@@ -37,15 +37,21 @@
    </section>
 
    <!-- Toolbar End -->
-<div class="search">
-  <div class="title" align="center">
-    <%= title %>
+<center>
+  <div class="search">
+    <div class="title">
+      <%= title %>
+    </div>
+    <p>찾으실 도서제목을 입력하세요!!</p>
+    <div>
+       <form method='GET' id='search' action='/libsearch'>
+          <input name="keyword" id="keystr" placeholder=" 검색어를 입력하세요." required>
+        </form>
+       <button id="button" onclick="document.getElementByID('search').submit()">
+          <div class="button_img"><img id="img" src="img/search.png"></div>
+        </button>
+    </div>
   </div>
-  <p align="center">찾으실 도서제목을 입력하세요!!</p>
-  <form method='GET' id='search' action='/libsearch'>
-      <input name="keyword" id="keystr" placeholder="검색어를 입력하세요." required>
-      <button onclick="document.getElementByID('search').submit()">검색 이미지</button>
-  </form>
-</div>
+</center>
 </body>
 </html>
