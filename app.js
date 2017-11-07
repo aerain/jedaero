@@ -32,8 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-// app.get('/schoolfood', baekdu);
-// app.get('/haksa', haksa);
 app.get('/libsearch', libserch);
 app.get('/timetable', timetable);
 app.get('/libseat', libseat);

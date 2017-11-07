@@ -1,15 +1,11 @@
-.search {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
 .title{
-  font-size: 4rem;
+  margin-top: 1rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .search p {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 a {

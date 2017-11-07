@@ -2,6 +2,7 @@
 <html>
 <head>
     <title><%= title %></title>
+    <meta name="viewport" id="viewport" content="width=device-width, height=device-height, user-scalable=no" />
     <script src="/javascripts/jquery-2.1.3.min.js"></script>
   	<script src="/javascripts/materialsidebar.min.js"></script>
   	<script src="/javascripts/webslider.js"></script>
@@ -37,10 +38,10 @@
 
    <!-- Toolbar End -->
 <div class="search">
-  <div class="title">
+  <div class="title" align="center">
     <%= title %>
   </div>
-  <p>찾으실 도서제목을 입력하세요!!</p>
+  <p align="center">찾으실 도서제목을 입력하세요!!</p>
   <form method='GET' id='search' action='/libsearch'>
       <input name="keyword" id="keystr" placeholder="검색어를 입력하세요." required>
       <button onclick="document.getElementByID('search').submit()">검색 이미지</button>
