@@ -33,12 +33,13 @@
   padding-top:15px;
   padding-bottom:15px;
   float:right;
-  width:70%;
+  width:75%;
+  font-size: 0.95rem;
 }
 .llib-text-left{
   padding-top:15px;
   padding-bottom:15px;
   float:left;
-  width:20%;
+  width:15%;
   padding-left: 30px;
 }

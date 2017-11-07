@@ -3,6 +3,7 @@
   margin-bottom: 0;
   padding: 1em;
 }
+
 .scroll-list {
   background-color: #D9E5FF;
   width: 100%;
@@ -24,10 +25,18 @@
   list-style-type: none;
   padding-left: 0;
 }
+
+.slide button {
+  display: block;
+  border: 0;
+  background-color: transparent;
+}
+
 ul li{
   font-size: 3.5rem;
   padding: 2.5rem;
 }
+
 .menu_s{
   background-color:white;
   width:100%;
@@ -37,6 +46,7 @@ ul li{
   border-radius:0.5rem;
   font-size: 4rem;
 }
+
 .bus_A{
    background-color: RGBA(41,128,185,0.66);
    height:20%;
@@ -47,6 +57,7 @@ ul li{
    border-radius:0.5rem;
    position: relative;
 }
+
 .bus_B{
    background-color:RGBA(41,128,185,0.66);
    width:100%;
@@ -57,6 +68,7 @@ ul li{
    border-radius:0.5rem;
    position: relative;
 }
+
 .A_icon{
   display: inline-block;
   padding-right: 0.5rem;
@@ -66,6 +78,7 @@ ul li{
   font-size: 6rem;
   width: 50%;
 }
+
 .A_time{
   display: inline-block;
   padding-top: 10rem;
@@ -74,6 +87,7 @@ ul li{
   padding-right: 2rem;
   float: right;
 }
+
 .B_icon{
   display: inline-block;
   padding-right: 0;
@@ -83,6 +97,7 @@ ul li{
   font-size: 6rem;
   width: 50%;
 }
+
 .B_time{
   display: inline-block;
   padding-top: 10rem;
@@ -91,22 +106,27 @@ ul li{
   padding-right: 0;
   float: left;
 }
+
 img{
   height: 70%;
   width: 70%;
   margin-top: 1rem;
 }
+
 .bus_name{
   color: RGB(64,83,113);
 }
+
 .time1{
   color: white;
   font-size: 8rem;
 }
+
 .time2{
   color: white;
   font-size: 3.5rem;
 }
+
 p{
   font-size: 2.2rem;
 }

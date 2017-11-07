@@ -59,47 +59,24 @@
     }
 
 
+
 </style>
-<script>
-    var ss = document.getElementById('search').submit();
-    var s = document.getElementById('search-submit').onclick;
-        function asd() {
-            document.getElementById('search').submit();
-            if(ss== true)
-            {
-                document.getElementById('result').style.display='block';
-            }
-            else
-            {
-                document.getElementById('result').style.display='none';
-            }
-        }
 
-
-
-
-
-
-
-</script>
-
-
-<form class="search-form" method='GET' id='search' action='/libsearch'>
+<form class="search-form" method='GET' id='search' action='/libsearch' >
     <div class="search-form-input" >
             <input name="keyword" id="search-keyword" placeholder="검색어를 입력하세요."required>
-            <input type="submit" value="검색"id="search-submit" onclick="asd();">
+            <input type="submit" value="검색"id="search-submit" onclick="document.getElementById('search').submit()">
     </div>
 </form>
 
 <form method='GET' id='detail' action="/libdetail">
     <input type="hidden" name="id" id="libnumber">
 <br>
-
-<% if (code !== "success.noRecord") { %>
+<% if (success !== false) { %>
     <div id="result">
-        <% for (var i = 0; i < data.list.length; i ++) { %>
+        <% for (var i = 0; i < data.list.length; i++) { %>
         <div class="result-list">
-            <span class="result-id"><a href="/libdetail?id=<%= data.list[i].id %>&keyword=<?keyword?>" onclick="document.getElementById('id').value = <%= data.list[i].id %>; document.getElementById('detail').submit();"><%= data.list[i].titleStatement %></a></span><br>
+            <span class="result-id"><a href="/libdetail?id=<%= data.list[i].id %>&keyword=<%=dbjson.keyword %>" onclick="document.getElementById('id').value = <%= data.list[i].id %>; document.getElementById('detail').submit();"><%= data.list[i].titleStatement %></a></span><br>
             <span class="result-author"> <%= data.list[i].author %> </span><br>
             <span class="result-publication"> <%= data.list[i].publication %> </span><br>
             <% if (JSON.stringify(data.list[i].branchVolumes) === "[]") { %>
@@ -114,7 +91,7 @@
         <br>
     <% } %>
 <% } else { %>
-    조회된 결과가 없습니다. a
+    조회된 결과가 없습니다.
 <% }%>
     </div>
 </form>
