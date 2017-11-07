@@ -32,7 +32,7 @@
     },
     {
       "name":"불노리",
-      "images":"bulnori.jpg",
+      "images":"img/krfood/bulnori.jpg",
       "tel":"064-755-4656"
     },
     {
@@ -42,27 +42,27 @@
     },
     {
       "name":"산아름국수",
-      "images":"sanareum.png",
-      "tel":"none"
+      "images":"img/krfood/sanareum.png",
+      "tel":""
     },
     {
       "name":"상아탑",
-      "images":"sangatop.png",
+      "images":"img/krfood/sangatop.png",
       "tel":"none"
     },
     {
       "name":"와랑와랑",
-      "images":"warang.png",
+      "images":"img/krfood/warang.png",
       "tel":"none"
     },
     {
       "name":"콘킹부대찌개",
-      "images":"conking",
+      "images":"img/krfood/conking.png",
       "tel":"none"
     },
     {
       "name":"토마토도시락",
-      "images":"tomato.jpg",
+      "images":"img/krfood/tomato.jpg",
       "tel":"none"
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "name":"통큰아이",
-      "images":"img/krfood/tongkeuneye",
+      "images":"img/krfood/tongkeuneye.png",
       "tel":"none"
     },
     {
