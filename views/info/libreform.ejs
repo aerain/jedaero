@@ -2,15 +2,50 @@
 <html>
 <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" id="viewport" content="width=device-width, height=device-height, user-scalable=no" />
+    <script src="/javascripts/jquery-2.1.3.min.js"></script>
+  	<script src="/javascripts/materialsidebar.min.js"></script>
+  	<script src="/javascripts/webslider.js"></script>
+    <link rel="stylesheet" href="stylesheets/frame.css">
+    <link rel='stylesheet' href="stylesheets/style.css"/>
     <meta charset="utf-8">
 </head>
 <body>
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
-<form method='GET' id='search' action='/libsearch'>
-    <input name="keyword" id="keystr" placeholder="검색어를 입력하세요." required>
-    <button onclick="document.getElementByID('search').submit()">검색 이미지</button>
-</form>
+
+  <!-- Toolbar -->
+    <div class="top-bar">
+      <div id="open-sb">
+      <img src="img/menu_button.png" alt="menu-button" align="left">
+    </div>
+      <div class="menu-name">
+        도서검색
+      </div>
+    </div>
+
+  <!-- Slidebar -->
+  <section class="sidebar">
+    <div class="menu-slide" align="left">
+      <ul>
+       <a href="/"><li class="home">홈</li></a>
+       <a href="#"><li class="bus">순환버스</li></a>
+       <a href="haksa"><li class="haksa">학사일정</li></a>
+       <a href="food_sort"><li class="food">뭐먹을까</li></a>
+       <a href="libseat"><li class="library">중도좌석</li></a>
+       <a href="libreform"><li class="book">도서검색</li></a>
+      </ul>
+     </div>
+   </section>
+
+   <!-- Toolbar End -->
+<div class="search">
+  <div class="title" align="center">
+    <%= title %>
+  </div>
+  <p align="center">찾으실 도서제목을 입력하세요!!</p>
+  <form method='GET' id='search' action='/libsearch'>
+      <input name="keyword" id="keystr" placeholder="검색어를 입력하세요." required>
+      <button onclick="document.getElementByID('search').submit()">검색 이미지</button>
+  </form>
+</div>
 </body>
 </html>
