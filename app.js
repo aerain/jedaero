@@ -65,6 +65,7 @@ app.get('/haksa', function(req,res) {
 app.get('/schoolfood', function(req,res) {
     res.render('info/schoolfood', {"title": "학식"});
 });
+
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
