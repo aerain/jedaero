@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="611ee0f3-238a-4fca-aef3-07818414d670" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/libdetail.js" afterPath="$PROJECT_DIR$/routes/libdetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/libserch.js" afterPath="$PROJECT_DIR$/routes/libserch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/info/libdetail.ejs" afterPath="$PROJECT_DIR$/views/info/libdetail.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/info/libserch.ejs" afterPath="$PROJECT_DIR$/views/info/libserch.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +19,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="libserch.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="libserch.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/libserch.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -33,11 +29,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="libserch.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="libserch.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/info/libserch.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
+            <state relative-caret-position="140">
               <caret line="74" column="24" lean-forward="false" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="libdetail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/libdetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -223,12 +229,12 @@
       <workItem from="1509457697329" duration="45448000" />
       <workItem from="1509964450505" duration="598000" />
       <workItem from="1509965676997" duration="2084000" />
-      <workItem from="1510046407424" duration="6924000" />
+      <workItem from="1510046407424" duration="8315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223695000" />
+    <option name="totallyTimeSpent" value="225086000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -586,14 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/libdetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="716">
@@ -602,18 +600,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/info/libserch.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="74" column="24" lean-forward="false" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/libserch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/libdetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/info/libserch.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="74" column="24" lean-forward="false" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
           <folding />
         </state>
       </provider>
