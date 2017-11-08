@@ -9,11 +9,11 @@
 
 button {
   padding: 0.4rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 3rem;
-  background-color: skyblue;
-  border-style: none;
-  border-bottom: solid 1px;
+  background-color: white;
+  border: solid 1px #BBBBBB;
+  font-weight:bold;
   width: 100%;
   height: auto;
 }
@@ -24,11 +24,11 @@ button {
 }
 
 .haksaday{
-  background-color: #CCCCCC;
+  background-color: rgba(192, 192, 192, 0.8);
 }
 
 .haksa>div{
-  font-size: 1.7rem;
+  font-size: 1.2rem;
 }
 
 .haksatitle{
