@@ -83,3 +83,8 @@ margin: 5px 5px;
 .slick-track{
   padding-bottom: 84px;
 }
+
+ul > .slick-active {
+  background-color:rgb(15, 100, 210);
+  color:white;
+}
