@@ -46,6 +46,11 @@
 
     //-->
     </SCRIPT>
+    <script>var d = new Date();
+            var x = 20;
+            var y = 40;
+            var z = 60;
+            </script>
   </head>
   <body>
     <!-- Toolbar -->
@@ -81,36 +86,99 @@
   			    <div id="scroll-list" class="scroll-list">
   			  <center>
   			    <ul class="slide">
-  			      <button><li>정문</li></button>
-  			      <button><li>제2도서관</li></button>
-              <button><li>해대1호관</li></button>
-              <button><li>교양동</li></button>
-              <button><li>공대4호관</li></button>
-              <button><li>의전원</li></button>
-              <button><li>중앙도서관</li></button>
-              <button><li>인문대학(동)</li></button>
-              <button><li>학생생활관</li></button>
-              <button><li>인문대학(서)</li></button>
-              <button><li>학생회관</li></button>
-              <button><li>본관</li></button>
+              <li>A버스</li>
+              <li>00분 20분 40분<br></li>
+              <li>휴식시간</li>
+              <li>9:40분, 14:20분, 16:40분</li>
+                <li></li>
+              <li>B버스</li>
+  			      <li>10분 30분 50분<br></li>
+              <li>휴식시간</li>
+              <li>10:10분, 14:50분, 17:10분</li>
+                <li></li>
+              <li>쉬는시간</li>
+              <li>A버스 : 11:00 ~ 12:00</li>
+              <li>B버스 : 12:00 ~ 13:00</li>
   			    </ul>
   			  </center></div><br>
 
-  			<div class="bus_A">
+  			<div class="bus_A" style=" cursor: pointer;" onclick="location='img/ABus.png'">
   				<div class="A_icon">
   					<span class="bus_name"><strong>A(시계)</strong></span><br>
   					<img src="img/bus_icon.png"></img>
   				</div>
   				<div class="A_time">
-  					<span class="time1">5분전</span><br>
-  					<span class="time2">다음버스 25분전</span>
+  					<span class="time1">
+              <script>
+                if(d.getHours() <= 18 && d.getHours() >= 8) {
+                  if (d.getMinutes()<20) {
+                    document.write((x-d.getMinutes())+"분전")
+                  }
+                  else if (d.getMinutes()<40) {
+                    document.write((y-d.getMinutes())+"분전")
+                  }
+                  else {
+                    document.write((z-d.getMinutes())+"분전")
+                  }
+                } else {
+                  document.write("배차아님")
+                }
+              </script>
+            </span>
+            <br>
+  					<span class="time2">
+              <script>
+              if(d.getHours() <= 18 && d.getHours() >= 8) {
+                if (d.getMinutes()<20) {
+                    document.write("다음 버스는 "+(20-d.getMinutes()+20)+"분전.")
+                }
+                else if (d.getMinutes()<40) {
+                   document.write("다음 버스는 "+(40-d.getMinutes()+20)+"분전")
+                }
+                else {
+                    document.write("다음 버스는 "+(60-d.getMinutes()+20)+"분전")
+                }
+              }
+              </script>
+          </span>
   				</div>
-  			</div><br>
-  			<div class="bus_B">
+  			</div>
+        <br>
+  			<div class="bus_B" style=" cursor: pointer;" onclick="location='img/BBus.png'">
   				<div class="B_time">
-  					<span class="time1">15분전</span><br>
-  					<span class="time2">다음버스 35분전</span>
-  				</div>
+            <span class="time1">
+              <script>
+              if(d.getHours() <= 18 && d.getHours() >= 8) {
+                if (d.getMinutes() > 10 && d.getMinutes()<30) {
+                  document.write((30-d.getMinutes())+"분전")
+                }
+                else if (d.getMinutes() > 30 && d.getMinutes()<50) {
+                   document.write((50-d.getMinutes())+"분전")
+                }
+                else {
+                  document.write(Math.abs(10-d.getMinutes())+"분전")
+                }
+              } else {
+                document.write("배차아님")
+              }
+              </script>
+            </span><br>
+  					<span class="time2">
+              <script>
+              if(d.getHours() <= 18 && d.getHours() >= 8) {
+              if (d.getMinutes()<10) {
+                document.write("다음 버스는 "+(x-d.getMinutes()+20)+"분전.")
+            }
+            else if (d.getMinutes()<30) {
+               document.write("다음 버스는 "+(y-d.getMinutes()+20)+"분전")
+            }
+            else {
+                document.write("다음 버스는 "+(z-d.getMinutes()+20)+"분전")
+                  }
+                }
+                  </script>
+          </span>
+  			</div>
   				<div class="B_icon">
   					<span class="bus_name"><strong>B(반시계)</strong></span><br>
   					<img src="img/bus_icon.png"></img>

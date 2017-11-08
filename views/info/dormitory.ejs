@@ -8,8 +8,10 @@
   <title>Slick test</title>
   <link rel="stylesheet" type="text/css" href="stylesheets/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/slick/slick-theme.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="javascripts/slick/slick.min.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/javascripts/slick/slick.min.js"></script>
+  <script src="/javascripts/materialsidebar.min.js"></script>
+  <script src="/javascripts/webslider.js"></script>
   <script>
   $(document).ready(function() {
     $(".slider").slick({
@@ -65,12 +67,33 @@
 
   </head>
   <body>
-    <div class="top-bar">
-      <img src="img/menu-button.jpg" alt="menu-button" align="left">
-      <div class="menu-name">
-        뭐 먹을까
+
+    <!-- Toolbar -->
+      <div class="top-bar">
+        <div id="open-sb">
+        <img src="img/menu_button.png" alt="menu-button" align="left">
       </div>
-    </div>
+        <div class="menu-name">
+          제대로 가자
+        </div>
+      </div>
+
+    <!-- Slidebar -->
+    <section class="sidebar">
+      <div class="menu-slide" align="left">
+        <ul>
+         <a href="/"><li class="home">홈</li></a>
+         <a href="#"><li class="bus">순환버스</li></a>
+         <a href="schedule"><li class="schedule">학사일정</li></a>
+         <a href="food_sort"><li class="food">뭐먹을까</li></a>
+         <a href="#"><li class="library">중도좌석</li></a>
+         <a href="#"><li class="book">도서검색</li></a>
+        </ul>
+       </div>
+     </section>
+
+     <!-- Toolbar End -->
+
     <div class="menu">
       <h1>학생생활관<br>식당메뉴</h1>
     </div>
