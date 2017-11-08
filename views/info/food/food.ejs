@@ -13,11 +13,11 @@
   </title>
   <style media="screen">
     .menupan {
-      
+
       width: 70%;
       margin-top: 0.5rem;
       padding: 0px;
-      padding-top: 2.56rem;
+      padding-top: 1rem;
       font-size: 2rem;
       display: inline-block;
       height: 5rem;
@@ -58,7 +58,9 @@
       transition: 0.3s;
       float: right;
       background-color: rgba(255, 255, 255, 0.8);
-
+      border-style: solid;
+      border-width: 0.05rem;
+      border-color: rgba(0, 0, 0, 0.2);
 
 
     }
@@ -68,17 +70,12 @@
       max-height: 100%
     }
 
-    <% for(i=1;
-    i < restdata.length;
-    i++) {
-      %>#menu<%=i%>:hover #card<%=i%> {
+    <% for(i=1; i < restdata.length; i++) {%>
+      #menu<%=i%>:hover #card<%=i%>{
         width: 20rem;
-        border-style: solid;
-      }
-      <%
-    }
 
-    %>
+      }
+      <%}%>
   </style>
 </head>
 
@@ -132,7 +129,7 @@
               <img src="<%= restdata[i].images %>" class="foodimg">
             </div>
             <div class="foodinfo">
-              <%= restdata[i].tel %>
+              <a href="tel:<%= restdata[i].tel %>"><%= restdata[i].tel %></a>
             </div>
             <div class="foodinfo">
               <%= restdata[i].name %>
