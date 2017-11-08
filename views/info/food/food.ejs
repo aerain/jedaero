@@ -13,22 +13,27 @@
   </title>
   <style media="screen">
     .menupan {
+      
       width: 70%;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       padding: 0px;
+      padding-top: 2.56rem;
       font-size: 2rem;
       display: inline-block;
       height: 5rem;
       vertical-align: middle;
-      background-color: rgba(12, 80, 160, 0.6);
+
+      /*background-color: rgba(12, 80, 160, 0.6);*/
 
       border-width: medium;
-      border-style: groove;
+      border-bottom: groove;
+
       border-color: rgba(12, 80, 160, 0.7);
     }
 
     .menupan:hover {
-      background-color: #CCCCCC;
+
+      background-color: rgba(12, 80, 160, 0.2);
     }
 
     .wrapper {
@@ -115,6 +120,8 @@
     </div>
   </section>
   <div class="wrapper">
+<br>
+<br>
     <% for(i=1; i < restdata.length; i++) { %>
       <div class="menupan" id="menu<%=i%>">
         <%= restdata[i].name %>

@@ -4,77 +4,77 @@
 
     {
       "name":"토니버거",
-      "images":"",
+      "images":"img/overseafood/",
       "tel":""
     },
     {
       "name":"꽁냥꽁냥",
-      "images":"",
+      "images":"img/overseafood/gongyang.png",
       "tel":""
     },
     {
       "name":"나인",
-      "images":"",
+      "images":"img/overseafood/nine.png",
       "tel":""
     },
     {
       "name":"도스마스",
-      "images":"",
+      "images":"img/overseafood/dosmas.png",
       "tel":""
     },
     {
       "name":"롯데리아",
-      "images":"",
-      "tel":""
+      "images":"img/overseafood/lotte.png",
+      "tel":"전화를안받는다는 소문이있다."
     },
     {
       "name":"맘스터치",
-      "images":"",
+      "images":"img/overseafood/momstouch.png",
       "tel":""
     },
     {
       "name":"아라평화반점",
-      "images":"",
-      "tel":""
+      "images":"img/overseafood/peacebanjum.png",
+      "tel":"064-724-1344/1366"
     },
     {
       "name":"오니기리와이규동",
-      "images":"",
+      "images":"img/overseafood/leegyudong.png",
       "tel":""
     },
     {
       "name":"진성반점",
-      "images":"",
+      "images":"img/overseafood/jinsung.jpg",
       "tel":""
     },
     {
       "name":"짬스뽕스",
-      "images":"",
+      "images":"img/overseafood/jjamsbbongs.jpg",
       "tel":""
     },
     {
       "name":"평화반점2",
-      "images":"",
+      "images":"img/overseafood/peacebanjum2.png",
       "tel":""
     },
     {
       "name":"하오돈부리",
-      "images":"",
+      "images":"img/overseafood/haodonburi.png",
       "tel":""
     },
     {
       "name":"월궁",
-      "images":"",
+      "images":"img/overseafood/moonpalace.jpg",
       "tel":""
     },
     {
       "name":"다래향",
-      "images":"",
+      "images":"img/overseafood/",
       "tel":""
     },
     {
-      "name":"글로벌하우스",
-      "images":"",
+      "name":"NAVI",
+      "images":"img/overseafood/navi.png",
       "tel":""
     }
   ]

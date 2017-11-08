@@ -9,26 +9,37 @@
 
 button {
   padding: 0.4rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 3rem;
-  background-color: skyblue;
-  border-style: none;
-  border-bottom: solid 1px;
+  background-color: white;
+  border: solid 1px #BBBBBB;
+  border-top: 0;
+  font-weight:bold;
   width: 100%;
   height: auto;
+}
+
+#month0btn {
+  border-top:1px solid #BBBBBB;
 }
 
 .show {
   max-height: 1000px;
   transition: 0.5s;
+  border-bottom:1px solid #BBBBBB;
 }
 
 .haksaday{
-  background-color: #CCCCCC;
+  background-color: rgba(192, 192, 192, 0.35);
+}
+
+.haksaschedule {
+  background-color: rgba(192, 192, 192, 0.2);
 }
 
 .haksa>div{
-  font-size: 1.7rem;
+  font-size: 1.2rem;
+  padding-left:1em;
 }
 
 .haksatitle{
