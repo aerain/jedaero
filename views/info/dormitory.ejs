@@ -35,7 +35,7 @@
         setTimeout("slideCateScroll('"+target+"')", 10);
   }
   function slideCateScroll(target) {
-      var Sel_Height=150;
+      var Sel_Height=200;
           el = document.getElementById(target);
       if (el.heightPos == null || (el.isDone && el.isOn == false)) {
           el.isDone = false;
@@ -116,8 +116,16 @@
           <td>07:30 ~ 09:00</td>
         </tr>
         <tr>
+          <td>점심</td>
+          <td>12:30 ~ 13:00</td>
+          </tr>
+        <tr>
           <td>저녁</td>
           <td>17:00 ~ 19:15</td>
+        </tr>
+        <tr>
+          <td>주말 저녁</td>
+          <td>17:30 ~ 09:00</td>
         </tr>
       </table>
 </div>
