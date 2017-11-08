@@ -9,10 +9,9 @@ var request = require('request');
 router.get('/libdetail', function(req, res, next) {
     search = req.query.id;
     detailjson = {};
-    console.log(req.query.id);
     url = "http://lib.jejunu.ac.kr/pyxis-api/1/collections/1/search";
     viewurl= "http://lib.jejunu.ac.kr/pyxis-api/1/biblios/732900/items";
-  //  console.log(search)
+
     if(url !== undefined) {
         url = "http://lib.jejunu.ac.kr/pyxis-api/1/collections/1/search?all=k|a|" + encodeURI(req.query.keyword) + "&facet=false&max=65535";
     }
@@ -37,25 +36,21 @@ router.get('/libdetail', function(req, res, next) {
                     break;
                 }
             }
-           // console.log(detailjson);
-        }
+
+
         request(viewurl,function (err, ress, html) {
             if(!err){
-                Bookjson = JSON.parse(html);
-
-                  //  console.log(twodetailjson);
-
-
-               // console.log(detailjson);
-                res.render('info/libdetail', {
-                    detailjson : detailjson,
-                    Bookjson : Bookjson
-                });
+                res.render('info/libdetail',
+                    {
+                        detailjson : detailjson,
+                        Bookjson : JSON.parse(html)
+                    }
+                );
 
             }
         });
+        }
     });
-   console.log(Bookjson);
 
 });
 

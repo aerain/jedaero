@@ -22,7 +22,7 @@ router.get('/libsearch', function(req, res, next) {
             }
         });
     } else {
-        url = "http://lib.jejunu.ac.kr/pyxis-api/1/collections/1/search?all=1|k|a|"
+        url = "http://lib.jejunu.ac.kr/pyxis-api/1/collections/1/search?all=1|k|a|";
         request(url, function (err, ress, html) {
             if (!err) {
                 dbjson = JSON.parse(html);
