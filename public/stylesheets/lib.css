@@ -5,31 +5,40 @@
   padding: 1rem;
   font-weight: bold;
   clear:both;
+
+  text-align: center;
   margin: 1rem;
   background-color: rgba(41, 128, 185, 0.66);
 
 }
-.lib-text-style{
-  text-align: left;
-  font-size: 1rem;
-  height: 12%;
+
+ul a {
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  display: block;
+
+}
+
+#lib_text{
+  padding-top:1rem;
+  padding-bottom:0.5rem;
+
   font-weight: bold;
-  display: inline-block;
+  font-size: 1.1rem;
+  width:auto;
 }
 .lib-text-left{
-  padding-top:15px;
-  padding-bottom:15px;
-  float:left;
-  width:25%;
+  text-align: right;
+  float: left;
   padding-left: 30px;
+
 }
 .lib-text-right{
-  padding-top:15px;
-  padding-bottom:15px;
-  float:right;
-  width:65%;
+
+  width:55%;
+  display: inline-block;
 }
-.llib-text-right{
+/*.llib-text-right{
   padding-top:15px;
   padding-bottom:15px;
   float:right;
@@ -40,6 +49,6 @@
   padding-top:15px;
   padding-bottom:15px;
   float:left;
-  width:15%;
+  width:10%;
   padding-left: 30px;
-}
+}*/
