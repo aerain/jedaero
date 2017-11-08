@@ -13,17 +13,27 @@ button {
   line-height: 3rem;
   background-color: white;
   border: solid 1px #BBBBBB;
+  border-top: 0;
   font-weight:bold;
   width: 100%;
   height: auto;
 }
 
+#month0btn {
+  border-top:1px solid #BBBBBB;
+}
+
 .show {
   max-height: 1000px;
   transition: 0.5s;
+  border-bottom:1px solid #BBBBBB;
 }
 
 .haksaday{
+  background-color: rgba(192, 192, 192, 0.35);
+}
+
+.haksaschedule {
   background-color: rgba(192, 192, 192, 0.2);
 }
 
