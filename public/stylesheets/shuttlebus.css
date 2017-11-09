@@ -33,18 +33,18 @@
 }
 
 ul li{
-  font-size: 3.5rem;
-  padding: 2.5rem;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 .menu_s{
   background-color:white;
   width:100%;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   color:black;
   border:0.1rem solid black;
   border-radius:0.5rem;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .bus_A{
@@ -108,23 +108,24 @@ ul li{
 }
 
 img{
-  height: 70%;
-  width: 70%;
+  height: 10rem;
+  width: 10rem;
   margin-top: 1rem;
 }
 
 .bus_name{
+  font-size: 3rem;
   color: RGB(64,83,113);
 }
 
 .time1{
   color: white;
-  font-size: 8rem;
+  font-size: 4rem;
 }
 
 .time2{
   color: white;
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 p{
