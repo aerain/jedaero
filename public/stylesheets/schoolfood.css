@@ -6,6 +6,14 @@
   font-weight: bold;
 }
 
+.click img {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: transparent;
+}
+
 .day-select {
   font-size: 1.1rem;
   color: white;
@@ -47,12 +55,6 @@
   white-space: pre-line;
   font-size:1.2rem;
 }
-/*
-ul > .slick-active {
-  background-color: rgb(15, 100, 210);
-  color:white;
-  원래 menu-cont색깔rgb(115,170,245)
-}*/
 
 .scroll-list {
 background-color: #efefef;
@@ -85,6 +87,6 @@ margin: 5px 5px;
 }
 
 ul > .slick-active {
-  background-color:rgb(15, 100, 210);
+  background-color: gray;
   color:white;
 }
