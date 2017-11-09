@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611ee0f3-238a-4fca-aef3-07818414d670" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/libserch.js" afterPath="$PROJECT_DIR$/routes/libserch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/info/libdetail.ejs" afterPath="$PROJECT_DIR$/views/info/libdetail.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,42 +34,6 @@
                 <marker date="1510155095327" expanded="true" signature="2781:2946" ph="..." />
                 <marker date="1510155095327" expanded="true" signature="2781:2958" ph="..." />
                 <marker date="1510155095327" expanded="true" signature="2835:2892" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chicken.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/json/chicken.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hansik.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/json/hansik.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1510155095309" expanded="true" signature="310:404" ph="{&quot;name&quot;: &quot;맵수다&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="410:495" ph="{&quot;name&quot;: &quot;밥먹젠&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="501:587" ph="{&quot;name&quot;: &quot;봉구스밥버거&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="593:688" ph="{&quot;name&quot;: &quot;불노리&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="694:778" ph="{&quot;name&quot;: &quot;산들애&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="784:870" ph="{&quot;name&quot;: &quot;산아름국수&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="876:960" ph="{&quot;name&quot;: &quot;상아탑&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="966:1049" ph="{&quot;name&quot;: &quot;와랑와랑&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="1055:1141" ph="{&quot;name&quot;: &quot;콘킹부대찌개&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="1147:1232" ph="{&quot;name&quot;: &quot;토마토도시락&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="1238:1330" ph="{&quot;name&quot;: &quot;통큰2층&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="1336:1424" ph="{&quot;name&quot;: &quot;통큰아이&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="1430:1529" ph="{&quot;name&quot;: &quot;학교종이 땡땡땡&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="1535:1632" ph="{&quot;name&quot;: &quot;흥부네&quot;...}" />
-                <marker date="1510155095309" expanded="true" signature="1638:1738" ph="{&quot;name&quot;: &quot;배꼽시계&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -118,8 +82,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1260">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="812">
+              <caret line="62" column="12" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -128,8 +92,8 @@
       <file leaf-file-name="libdetail.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/info/libdetail.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+            <state relative-caret-position="140">
+              <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -138,11 +102,31 @@
       <file leaf-file-name="libserch.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/info/libserch.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="-2443">
               <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="53" />
               <folding>
                 <marker date="1510154231002" expanded="true" signature="2224:3847" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="libserch.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/libserch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="libdetail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/libdetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -175,7 +159,6 @@
         <option value="$PROJECT_DIR$/views/info/libreform.ejs" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/info/libserch.ejs" />
-        <option value="$PROJECT_DIR$/routes/libserch.js" />
         <option value="$PROJECT_DIR$/routes/libdetail.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/lib.css" />
         <option value="$PROJECT_DIR$/views/info/bussoyoung.ejs" />
@@ -186,6 +169,7 @@
         <option value="$PROJECT_DIR$/views/info/centrallibrary.ejs" />
         <option value="$PROJECT_DIR$/views/info/food/food.ejs" />
         <option value="$PROJECT_DIR$/views/info/food_sort.ejs" />
+        <option value="$PROJECT_DIR$/routes/libserch.js" />
         <option value="$PROJECT_DIR$/views/info/libdetail.ejs" />
       </list>
     </option>
@@ -328,12 +312,12 @@
       <workItem from="1510046407424" duration="8875000" />
       <workItem from="1510126812537" duration="8231000" />
       <workItem from="1510145357604" duration="8289000" />
-      <workItem from="1510214523353" duration="153000" />
+      <workItem from="1510214523353" duration="547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242319000" />
+    <option name="totallyTimeSpent" value="242713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -395,8 +379,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/info/bussoyoung.ejs" />
-    <entry file="file://$PROJECT_DIR$/views/info/dormitory.ejs.bak" />
     <entry file="file://$PROJECT_DIR$/views/bus_index.ejs" />
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
@@ -701,17 +683,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1260">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/info/libserch.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="-2443">
           <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="53" />
           <folding>
             <marker date="1510154231002" expanded="true" signature="2224:3847" ph="..." />
@@ -719,10 +693,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/libdetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="62" column="12" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/libserch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/info/libdetail.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        <state relative-caret-position="140">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding />
         </state>
       </provider>
