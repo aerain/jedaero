@@ -4,13 +4,13 @@
 
     {
       "name":"토니버거",
-      "images":"img/overseafood/",
+      "images":"img/overseafood/tonibuger.png",
       "tel":""
     },
     {
       "name":"꽁냥꽁냥",
       "images":"img/overseafood/gongyang.png",
-      "tel":""
+      "tel":"꽁냥꽁냥하지마라 뚝배기부숴버릴랑께"
     },
     {
       "name":"나인",
@@ -35,7 +35,7 @@
     {
       "name":"아라평화반점",
       "images":"img/overseafood/peacebanjum.png",
-      "tel":"064-724-1344/1366"
+      "tel":"064-724-1344"
     },
     {
       "name":"오니기리와이규동",
@@ -65,11 +65,6 @@
     {
       "name":"월궁",
       "images":"img/overseafood/moonpalace.jpg",
-      "tel":""
-    },
-    {
-      "name":"다래향",
-      "images":"img/overseafood/",
       "tel":""
     },
     {
