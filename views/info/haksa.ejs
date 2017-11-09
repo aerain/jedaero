@@ -21,7 +21,7 @@
       <img src="img/menu_button.png" alt="menu-button" align="left">
     </div>
       <div class="menu-name">
-        제대로 가자
+        학사일정
       </div>
     </div>
 
@@ -54,12 +54,15 @@
       </button>
       <ul class="haksa"id="month<%=i%>li">
         <% for (j = 0; j < (month[i].schedule.length / 2); j++) { %>
-          <div class="haksaday">
-            <%=month[i].schedule[2 * j].haksa %>
-          </div>
+          <div class="box">
+            <div class="haksaday" align="center">
+              <%=month[i].schedule[2 * j].haksa %>
+            </div>
 
-          <div class="haksaschedule">
-            <%=month[i].schedule[2 * j + 1].haksa %>
+            <div class="haksaschedule" align="center">
+              <%=month[i].schedule[2 * j + 1].haksa %>
+
+            </div>
 
           </div>
 

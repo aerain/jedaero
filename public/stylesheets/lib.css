@@ -5,14 +5,13 @@
   padding: 1rem;
   font-weight: bold;
   clear:both;
-
   text-align: center;
   margin: 1rem;
   background-color: rgba(41, 128, 185, 0.66);
 
 }
 
-ul a {
+.seat a {
   margin-bottom: 1.5rem;
   margin-top: 1rem;
   display: block;
@@ -27,28 +26,15 @@ ul a {
   font-size: 1.1rem;
   width:auto;
 }
+
 .lib-text-left{
   text-align: right;
   float: left;
   padding-left: 30px;
-
 }
+
 .lib-text-right{
 
   width:55%;
   display: inline-block;
 }
-/*.llib-text-right{
-  padding-top:15px;
-  padding-bottom:15px;
-  float:right;
-  width:75%;
-  font-size: 0.95rem;
-}
-.llib-text-left{
-  padding-top:15px;
-  padding-bottom:15px;
-  float:left;
-  width:10%;
-  padding-left: 30px;
-}*/

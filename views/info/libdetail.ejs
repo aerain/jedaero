@@ -3,14 +3,21 @@
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" id="viewport" content="width=device-width, height=device-height, user-scalable=no" />
-    <title>바부</title>
+    <title>도서 상세정보</title>
+    <script src="/javascripts/jquery-3.2.1.min.js"></script>
+    <script src="/javascripts/materialsidebar.min.js"></script>
+    <script src="/javascripts/webslider.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
     <link rel='stylesheet' href='/stylesheets/frame.css'/>
 </head>
 <style>
     .pagename{
+        margin-top: 1.7rem;
+        margin-bottom: 1.7rem;
+        margin-left: 1rem;
         padding : 2%;
-        font-size : 4rem;
+        font-size : 3rem;
+        font-weight: bold;
     }
     .hr{
         border: 1px solid #b8b4b4;
@@ -27,11 +34,13 @@
     .detail-form{
         list-style-type:none;
     }
+
     .detail-form-typeresult,.detail-form-Signatureresult
     ,.detail-form-authorresult,.detail-form-volumeresult
     ,.detail-form-publish{
         border-bottom: 1px solid #b8b4b4;
     }
+
     .detail-form-type-result,.detail-form-Siganture-result
     ,.detail-form-author-result,.detail-form-volume-result
     ,.detail-form-pub-result
@@ -94,7 +103,7 @@
       <img src="img/menu_button.png" alt="menu-button" align="left">
     </div>
       <div class="menu-name">
-        제대로 가자
+        도서검색
       </div>
     </div>
 
@@ -102,6 +111,7 @@
   <section class="sidebar">
     <div class="menu-slide" align="left">
       <ul>
+<<<<<<< HEAD
         <a href="/">
           <li class="home">홈</li>
         </a>
@@ -121,12 +131,21 @@
           <li class="book">도서검색</li>
         </a>
       </ul>>
+=======
+       <a href="/"><li class="home">홈</li></a>
+       <a href="shuttlebus"><li class="bus">순환버스</li></a>
+       <a href="haksa"><li class="schedule">학사일정</li></a>
+       <a href="food_sort"><li class="food">뭐먹을까</li></a>
+       <a href="libseat"><li class="library">중도좌석</li></a>
+       <a href="libreform"><li class="book">도서검색</li></a>
+      </ul>
+>>>>>>> 20c4d6faeb7fe5df6601d585d61f3bf324532e1c
      </div>
    </section>
 
    <!-- Toolbar End -->
 
-<h2 class="pagename">상세정보</h2>
+<div class="pagename">상세정보</div>
 <hr class = "hr">
 <div class="detail">
     <ul class="detail-form">

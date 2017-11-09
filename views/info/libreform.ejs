@@ -26,6 +26,7 @@
   <section class="sidebar">
     <div class="menu-slide" align="left">
       <ul>
+<<<<<<< HEAD
         <a href="/">
           <li class="home">홈</li>
         </a>
@@ -44,6 +45,14 @@
         <a href="libreform">
           <li class="book">도서검색</li>
         </a>
+=======
+       <a href="/"><li class="home">홈</li></a>
+       <a href="shuttlebus"><li class="bus">순환버스</li></a>
+       <a href="haksa"><li class="haksa">학사일정</li></a>
+       <a href="food_sort"><li class="food">뭐먹을까</li></a>
+       <a href="libseat"><li class="library">중도좌석</li></a>
+       <a href="libreform"><li class="book">도서검색</li></a>
+>>>>>>> 20c4d6faeb7fe5df6601d585d61f3bf324532e1c
       </ul>
      </div>
    </section>
@@ -58,10 +67,10 @@
     <div>
        <form method='GET' id='search' action='/libsearch'>
           <input name="keyword" id="keystr" placeholder=" 검색어를 입력하세요." required>
-        </form>
-       <button id="button" onclick="document.getElementByID('search').submit()">
+          <button id="button" onclick="document.getElementByID('search').submit()">
           <div class="button_img"><img id="img" src="img/search.png"></div>
-        </button>
+          </button>
+       </form>
     </div>
   </div>
 </center>
