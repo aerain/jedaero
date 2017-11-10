@@ -33,6 +33,9 @@ router.get('/libdetail', function(req, res, next) {
                     if (JSON.stringify(bookjson.data.list[i].branchVolumes !== "[]")) {
                         detailjson["branch"] = bookjson.data.list[i].branchVolumes[0];
                     }
+
+
+
                     break;
                 }
             }
@@ -47,7 +50,6 @@ router.get('/libdetail', function(req, res, next) {
                     }
 
                 );
-                console.log(detailjson.branch);
             }
         });
         }

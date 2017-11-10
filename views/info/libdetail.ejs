@@ -51,6 +51,12 @@
         margin-left: 5%;
 
     }
+    .detail-form-volume-result-no
+    {
+        padding:1.5%;
+        margin-left : 5%;
+        color : red;
+    }
     .detail-form-type,.detail-form-Signature,
     .detail-form-volume,.detail-form-author,.detail-form-pub{
         font-size:17pt;
@@ -84,6 +90,10 @@
         font-size: 1.1rem;
 
     }
+    .cState-name-result-no{
+        font-size: 1.1rem;
+        color : red;
+    }
     th
     {
         font-size : 1.2rem;
@@ -94,6 +104,11 @@
         width: 29.5%;
        text-align:center;
         font-size: 0.8rem;
+    }
+    .cState-result-no{
+        font-size: 1rem;
+        color : red;
+        text-align: left;
     }
 </style>
 <body>
@@ -147,7 +162,11 @@
         </li>
         <li class="detail-form-volumeresult">
             <label class="detail-form-volume">청구 기호</label>
+            <% if(detailjson.branch !== undefined) { %>
             <span class="detail-form-volume-result"><%=detailjson.branch.volume %></span>
+            <%} else { %>
+            <span class="detail-form-volume-result-no"><strong>알 수 없습니다.</strong></span>
+            <% } %>
         </li>
     </ul>
 
@@ -157,7 +176,11 @@
 
 
     <div class="cState">
+        <% if(detailjson.branch !== undefined) { %>
         <strong class="cState-name-result"><%= detailjson.branch.name %></strong>
+        <% } else { %>
+        <strong class="cState-name-result-no">알 수 없습니다</strong>
+        <% } %>
     </div>
 
     <table class="cStateandresult">
@@ -170,6 +193,7 @@
             <th class="status">상태</th>
         </tr>
         </thead>
+        <% if(detailjson.branch !== undefined) { %>
         <% for(var i=0; i<Bookjson.data[detailjson.branch.id].length; i++) { %>
         <tbody class="cState-result-Bundle">
 
@@ -180,6 +204,11 @@
             <td class="status-result"><%= Bookjson.data[detailjson.branch.id][i].circulationState.name %></td>
         </tr>
         <%}%>
+        <% } else { %>
+        <td class="cState-result-no" colspan="3"><strong>&nbsp;&nbsp;&nbsp;알 수 없습니다</strong></td>
+
+        <% } %>
+
     </tbody>
 
     </table>
