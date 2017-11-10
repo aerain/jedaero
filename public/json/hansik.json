@@ -67,7 +67,7 @@
     },
     {
       "name":"통큰2층",
-      "images":"tongkeun2floor.png",
+      "images":"img/krfood/tongkeun2floor.png",
       "tel":"064-725-6665"
     },
     {
@@ -78,7 +78,7 @@
     {
       "name":"학교종이 땡땡땡",
       "images":"img/krfood/schoolbelldeng.png",
-      "tel":"none"
+      "tel":""
     },
     {
       "name":"흥부네",

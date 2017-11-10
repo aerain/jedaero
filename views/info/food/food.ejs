@@ -116,15 +116,15 @@
       </ul>
     </div>
   </section>
-  <div class="wrapper">
+  <div class="wrapper" onclick="return ture">
 <br>
 <br>
     <% for(i=1; i < restdata.length; i++) { %>
-      <div class="menupan" id="menu<%=i%>">
+      <div class="menupan" id="menu<%=i%>" onclick="return ture">
         <%= restdata[i].name %>
 
 
-          <div class="foodcard" id="card<%=i%>">
+          <div class="foodcard" id="card<%=i%>" onclick="return ture">
             <div class="imgdiv">
               <img src="<%= restdata[i].images %>" class="foodimg">
             </div>
