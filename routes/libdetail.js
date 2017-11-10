@@ -45,8 +45,9 @@ router.get('/libdetail', function(req, res, next) {
                         detailjson : detailjson,
                         Bookjson : JSON.parse(html)
                     }
-                );
 
+                );
+                console.log(detailjson.branch);
             }
         });
         }

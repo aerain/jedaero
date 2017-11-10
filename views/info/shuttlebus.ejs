@@ -81,7 +81,6 @@
 
     <div class="wrapper">
   		<div id="main-wrapper">
-  				<center>
   			    <div class="menu_s" href=# onclick="slideCateScroll('scroll-list')"><B>정문</B></div>
   			    <div id="scroll-list" class="scroll-list">
   			  <center>
@@ -101,14 +100,16 @@
               <li>B버스 : 12:00 ~ 13:00</li>
   			    </ul>
   			  </center></div><br>
+                </div>
+    </div>
 
   			<div class="bus_A" style=" cursor: pointer;" onclick="location='img/ABus.png'">
   				<div class="A_icon">
-  					<span class="bus_name"><strong>A(시계)</strong></span><br>
+  					<span class="bus_name"><strong>&nbsp;&nbsp;A(시계)</strong></span><br>
   					<img src="img/bus_icon.png"></img>
   				</div>
   				<div class="A_time">
-  					<span class="time1">
+  					<div class="time1">
               <script>
                 if(d.getHours() <= 18 && d.getHours() >= 8) {
                   if (d.getMinutes()<20) {
@@ -124,7 +125,7 @@
                   document.write("배차아님")
                 }
               </script>
-            </span>
+            </div>
             <br>
   					<span class="time2">
               <script>
@@ -145,8 +146,12 @@
   			</div>
         <br>
   			<div class="bus_B" style=" cursor: pointer;" onclick="location='img/BBus.png'">
-  				<div class="B_time">
-            <span class="time1">
+                <div class="B_icon">
+                    <span class="bus_name"><strong>B(반시계)</strong></span><br>
+                    <img src="img/bus_icon.png"></img>
+                </div>
+                <div class="B_time">
+            <div class="time1">
               <script>
               if(d.getHours() <= 18 && d.getHours() >= 8) {
                 if (d.getMinutes() > 10 && d.getMinutes()<30) {
@@ -162,7 +167,7 @@
                 document.write("배차아님")
               }
               </script>
-            </span><br>
+            </div><br>
   					<span class="time2">
               <script>
               if(d.getHours() <= 18 && d.getHours() >= 8) {
@@ -179,14 +184,11 @@
                   </script>
           </span>
   			</div>
-  				<div class="B_icon">
-  					<span class="bus_name"><strong>B(반시계)</strong></span><br>
-  					<img src="img/bus_icon.png"></img>
+
   				</div>
-  				</div>
-  			</div>
+
   		</center>
   		<p><br> * 버스 사정에 따라 차이가 있을 수 있음</p><br>
-  		</div>
+
   </body>
 </html>

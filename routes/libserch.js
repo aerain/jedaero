@@ -26,7 +26,7 @@ router.get('/libsearch', function(req, res, next) {
         request(url, function (err, ress, html) {
             if (!err) {
                 dbjson = JSON.parse(html);
-                dbjson.title = "ㅗ";
+                dbjson.title = "도서검색결과";
                 console.log(dbjson.success);
                 res.render('info/libserch', dbjson);
             }
